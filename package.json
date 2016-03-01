@@ -1,0 +1,31 @@
+{
+  "name": "backbone.uikit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vash15/backbone.uikit.git"
+  },
+  "keywords": [
+    "backbone",
+    "uikit",
+    "ui"
+  ],
+  "contributors": [
+    { "name" : "Matteo Baggio", 
+      "email" : "matteo.baggio@gmail.com"
+    },
+    { "name" : "Michele Belluco", 
+      "email" : "michele@belluco.info"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vash15/backbone.uikit/issues"
+  },
+  "homepage": "https://github.com/vash15/backbone.uikit#readme"
+}

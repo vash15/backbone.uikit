@@ -1,0 +1,62 @@
+
+// Add vendor prefixes to keyframes
+@mixin keyframe ($animation-name) {
+	@-webkit-keyframes #{$animation-name}{
+		@content;
+	}
+	@-moz-keyframes #{$animation-name}{
+		@content;
+	}
+	@-o-keyframes #{$animation-name}{
+		@content;
+	}
+	@keyframes #{$animation-name}{
+		@content;
+	}
+}
+
+// Usage: @include animation(block-1-animate, $speed, ease-out, infinite, null)
+@mixin animation ($animation, $duration, $transition, $iteration, $fillMode){
+	
+	-webkit-animation-name: $animation;
+	-moz-animation-name: $animation;
+	-ms-animation-name: $animation;
+	-o-animation-name: $animation;
+	animation-name: $animation;
+
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-ms-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+	
+	
+	@if $transition{
+		-webkit-animation-timing-function: $transition;
+		-moz-animation-timing-function: $transition;
+		-ms-animation-timing-function: $transition;
+		-o-animation-timing-function: $transition;
+		animation-timing-function: $transition;
+	}
+
+	@if $iteration{
+		-webkit-animation-iteration-count: $iteration;
+		-moz-animation-iteration-count: $iteration;	
+		-ms-animation-iteration-count: $iteration;	
+		-o-animation-iteration-count: $iteration;
+		animation-iteration-count: $iteration;
+	}
+
+	@if $fillMode {
+		-webkit-animation-fill-mode: both;
+		-moz-animation-fill-mode: both;
+		-ms-animation-fill-mode: both;
+		-o-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+
+}
+
+
+
+

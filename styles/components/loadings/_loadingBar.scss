@@ -1,0 +1,84 @@
+.loadingBar {
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	top: 44px;
+	right: 0;
+	left: 0;
+	height: 4px;
+	margin-top: -4px;
+
+	.indeterminate {
+		background-color: #333;
+		&:before {
+			content: '';
+			position: absolute;
+			background-color: inherit;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 200px;
+			will-change: transform, -webkit-transform;
+
+			-webkit-animation-duration: 2.1s;
+				animation-duration: 2.1s;
+			-webkit-animation-timing-function: cubic-bezier(0.65, 0.815, 0.735, 0.395);
+				animation-timing-function: cubic-bezier(0.65, 0.815, 0.735, 0.395);
+			-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+			-webkit-animation-name: none;
+				animation-name: none;
+
+			// -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+			// 	animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+		}
+	}
+	&.show{
+		display: block;
+		.indeterminate{
+			&:before {
+				-webkit-animation-name: indeterminate;
+					animation-name: indeterminate;
+			}
+		}
+	}
+}
+.doubleHeader .loadingBar {
+	top: 88px;
+}
+.noHeader .loadingBar{
+	top: 4px;
+	z-index: 20050 !important;
+}
+.ios .loadingBar {
+	top: 44px + 20px;
+}
+.ios.doubleHeader .loadingBar {
+	top: 88px + 20px;
+}
+.ios.noHeader .loadingBar{
+	top: 4px + 20px;
+}
+
+@-webkit-keyframes indeterminate {
+  0% {
+	-webkit-transform: translate3d(-200px, 0, 0);
+  }
+  60% {
+  	-webkit-transform: translate3d(100px, 0, 0);
+  }
+  100% {
+	-webkit-transform: translate3d(1024px, 0, 0);
+  }
+}
+@keyframes indeterminate {
+  0% {
+	transform: translate3d(-200px, 0, 0);
+  }
+  60% {
+  	transform: translate3d(100px, 0, 0);
+  }
+  100% {
+	transform: translate3d(1024px, 0, 0);
+  }
+}

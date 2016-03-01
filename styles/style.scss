@@ -1,0 +1,80 @@
+//
+// Variabili globali
+// 
+
+// $primary-color: #0D2B59;
+// $primary-color-active: #53002B;
+// $link-color: #F1B700;
+// $link-color-active: #333333;
+// $action-color: $link-color;
+// $background-color: #FFF;
+// $background-color-active: #EAE9E9;
+// $background-color-secondary: #EAE9E9;
+// $background-color-active: #EAE9E9;
+// $background-color-dark: #071831;
+// $background-color-error: $link-color;
+
+// $border-color: #0D2B59;
+// $border-soft-color: #ebebeb;
+// $input-border-color: #0D2B59;
+
+// $text-color: #666666;
+// $text-soft-color: #999999;
+// $text-hard-color: #333333;
+// $text-negate-color: #FFF;
+
+// $icon-soft-color: #B7B7B7;
+
+// $alert-color: #D0021B;
+// $suggest-color: $primary-color;
+// $success-color: #7ED321;
+// $warning-color: #F5A623;
+// $prospect-color: #4A90E2;
+
+@if variable-exists(icon-font) == false {
+	$icon-font: '';
+}
+
+// Colors
+@if variable-exists(overlay-color) == false {
+	$overlay-color: rgba(0,0,0,0.3);
+}
+
+// Dimensions
+@if variable-exists(toolbar-height) == false {
+    $toolbar-height: 44px;
+}
+@if variable-exists(statusbar-heigh) == false {
+    $statusbar-height: 20px;
+}
+
+
+// Vendor
+@import 'vendor/normalize';
+@import 'vendor/grid';
+
+// Modules
+@import 'modules/utils';
+@import 'modules/animation';
+
+// Animations
+@import 'animations/fadeOut';
+@import 'animations/fadeOutDown';
+@import 'animations/fadeOutUp';
+@import 'animations/fadeIn';
+@import 'animations/fadeInDown';
+@import 'animations/fadeInUp';
+@import 'animations/slideInRight';
+@import 'animations/slideOutRight';
+@import 'animations/slideInLeft';
+@import 'animations/slideoutLeft';
+@import 'animations/slideInBottom';
+@import 'animations/slideOutBottom';
+
+// Components
+@import 'components/dialogs/_modal';
+@import 'components/listview/_listview';
+@import 'components/loadings/_loading';
+@import 'components/loadings/_loadingBar';
+@import 'components/loadings/_loadingScreen';
+@import 'components/maps/_map';

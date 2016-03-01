@@ -1,0 +1,201 @@
+
+.modal {
+	@extend %fullscreen;
+	.overlay {
+		@extend %fullscreen;
+		background-color: $overlay-color;
+	}
+	& > .container {
+		@extend %fullscreen;
+		right: auto;
+		width: 485px;
+		background-color: white;
+		box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		// -webkit-animation: slideInLeft 0.25s;
+		& > .title {
+			height: $toolbar-height;
+			line-height: $toolbar-height;
+			padding: 20px 10px 0 10px;
+			margin: 0;
+		}
+		& > .content {
+			@extend %fullscreen;
+			@extend %scroll;
+			bottom: $toolbar-height;
+		}
+	}
+	.withTitle > .content, .withFilter > .content {
+		top: $toolbar-height + $statusbar-height;
+	}
+	.withTitle.withFilter > .content {
+		top: ($toolbar-height + $statusbar-height) * 2;
+	}
+	.toolbar {
+		text-align: left;
+		.remove, .disconnect {
+			float: right;
+			margin-top: 3px;
+		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: -10px;
+		// 	left: 0;
+		// 	right: 0;
+		// 	height: 10px;
+		// 	background: url(../img/cart-shadow.png) no-repeat center top;
+		// 	background-size: 264px 15px;
+		// }
+	}
+	.searchFilter {
+		margin: 0 20px;
+	}
+}
+
+.ios .modal > .container {
+	top: 20px;
+	&:before {
+		content: '';
+		background-color: rgba(255,255,255,0.3);
+		position: absolute;
+		top: -20px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.modal.pop {
+	.overlay {
+		// -webkit-animation: fadeOut 0.25s 0.25s;
+		// -webkit-animation-fill-mode: both;
+	}
+	.container {
+		// -webkit-animation: slideOutLeft 0.25s 0.15s;
+		// -webkit-animation-fill-mode: both;
+	}
+}
+
+.modal.lookup {
+	.container {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: auto;
+		margin: 0;
+		border-radius: 0px;
+		width: 90%;
+		background-color: #FFF;
+		will-change: transform, -webkit-transform, box-shadow;
+
+		-webkit-animation: slideInRight 0.25s;
+				animation: slideInRight 0.25s;
+		-webkit-animation-fill-mode: none;
+				animation-fill-mode: none;
+
+		.title {
+			padding-bottom: 10px;
+			text-align: center;
+			color: #000;
+  			font-size: 21px;
+		}
+		.toolbar {
+			.button.confirm{
+				width: 65%;
+				&.active-state{}
+			}
+			.button.cancel{
+				width: 100% - 65%;
+				&.active-state{}
+			}
+		}
+	}
+}
+.modal.lookup.pop .container {
+	-webkit-animation: slideOutRight 0.25s 0.15s;
+		animation: slideOutRight 0.25s 0.15s;
+	-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+}
+.ios .modal.lookup {
+	.container{
+		top: 20px;
+	}
+}
+.android .modal {
+	.overlay {
+		background: none !important;
+	}
+}
+
+
+
+.modal.imageView{
+	z-index: 10100 !important;
+	// transition: opacity 200ms;
+
+	.overlay {
+		-webkit-animation: fadeIn  0.25s 0.15s;
+		-webkit-animation-fill-mode: both;
+		animation: fadeIn 0.25s 0.25s;
+		animation-fill-mode: both;
+	}
+	.container{
+		width: auto;
+		right: 0;
+		overflow: hidden;
+
+		-webkit-animation: fadeIn 0.25s 0.25s;
+		-webkit-animation-fill-mode: both;
+		animation: fadeIn 0.25s 0.25s;
+		animation-fill-mode: both;
+		.content{
+			bottom: 0;
+			overflow: hidden;
+			img{
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				transition: all 300ms;
+    				-webkit-transition: all 300ms;
+			}
+		}
+	}
+	.toolbar{
+		top: 0;
+		bottom: auto;
+		.button.cancel{
+			&.active-state{
+			}
+		}
+		&:before {
+			content: none;
+		}
+	}
+	&.pop{
+		.overlay {
+			-webkit-animation: fadeOut 0.25s 0.25s;
+			animation: fadeOut 0.25s 0.25s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+		.container {
+			-webkit-animation: fadeOut 0.25s 0.15s;
+			animation: fadeOut 0.25s 0.15s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+	}
+}
+
+.ios .modal.imageView {
+	.toolbar{
+		top: 20px;
+	}
+	.container {
+		top: 0;
+	}
+}

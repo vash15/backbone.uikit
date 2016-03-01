@@ -1,0 +1,29 @@
+
+.loading {
+	// display: none;
+	vertical-align: middle;
+	.inner {
+		display: inline-block;
+		.spinner {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+		}
+		.spinner:after {
+			content: '';
+			opacity: 1;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+			border-top: 5px solid #333;
+			border-bottom: 5px solid #d4d4db;
+			border-left: 5px solid #333;
+			border-right: 5px solid #d4d4db;
+			will-change: transform, -webkit-transform;
+			-webkit-animation: rotateLoading 0.6s linear infinite;
+					animation: rotateLoading 0.6s linear infinite;
+		}
+	}
+}
+

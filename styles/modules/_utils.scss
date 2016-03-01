@@ -1,0 +1,65 @@
+
+%header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 20px;
+	height: $toolbar-height;
+	overflow: hidden;
+}
+
+%fullscreen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+%noScroll {
+	overflow: initial;
+	-webkit-overflow-scrolling: none;
+	        overflow-scrolling: none;
+}
+%scroll {
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	        overflow-scrolling: touch;
+}
+%hscroll {
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	        overflow-scrolling: touch;
+}
+%animatedView {
+	-webkit-animation: slideInRight 300ms;
+	        animation: slideInRight 300ms;
+	&.pop {
+		-webkit-animation: slideOutRight 300ms;
+		        animation: slideOutRight 300ms;
+		-webkit-animation-fill-mode: both;
+		        animation-fill-mode: both;
+	}
+}
+
+// .hide {
+// 	display: none;
+// }
+
+// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+@mixin respond-to($media) {
+	@if $media == retina {
+		@media ( -webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+	}
+	@else if $media == smallPhone {
+		@media only screen and ( max-height: 480px ) { @content; }
+	}
+	@else if $media == mediumPhone {
+		@media only screen and ( max-height: 568px ) { @content; }
+	}
+	@else if $media == extraSmallPhone {
+		@media only screen and ( max-height: 400px ) { @content; }
+	}
+}
