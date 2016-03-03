@@ -1,7 +1,7 @@
 {
   "name": "backbone.uikit",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backbone UIKit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
