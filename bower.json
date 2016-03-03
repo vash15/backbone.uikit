@@ -18,6 +18,14 @@
     "uikit",
     "ui"
   ],
+  "authors": [
+    { "name" : "Matteo Baggio", 
+      "email" : "matteo.baggio@gmail.com"
+    },
+    { "name" : "Michele Belluco", 
+      "email" : "michele@belluco.info"
+    }
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -47,9 +55,5 @@
     "backbone": "^1.2.3",
     "underscore": "^1.8.3",
     "jquery": "^2.2.1"
-  },
-  "scripts": {
-    "preinstall": "touch preinstall.txt",
-    "postinstall": "touch postinstall.txt"
   }
 }
