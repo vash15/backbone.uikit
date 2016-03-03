@@ -1,8 +1,7 @@
 {
 	"analytics": true,
 	"scripts": {
-		"preinstall": "echo preinstall; sleep 2s;",
-	    "postinstall": "echo postinstall; sleep 2s;",
-	    "preuninstall": "echo preuninstall"
+		"preinstall": "touch preinstall.txt",
+	    "postinstall": "touch postinstall.txt"
 	}
 }
