@@ -1,8 +1,6 @@
 {
 	"analytics": true,
 	"scripts": {
-		"preinstall": "echo preinstall",
-		"postinstall": "echo postinstall",
-		"preuninstall": "echo preuninstall"
+		
 	}
 }
