@@ -1,7 +1,3 @@
 {
-	"analytics": true,
-	"scripts": {
-		"preinstall": "touch preinstall.txt",
-	    "postinstall": "touch postinstall.txt"
-	}
+	"analytics": true
 }

@@ -49,8 +49,7 @@
     "jquery": "^2.2.1"
   },
   "scripts": {
-    "preinstall": "echo preinstall",
-    "postinstall": "echo postinstall",
-    "preuninstall": "echo preuninstall"
+    "preinstall": "touch preinstall.txt",
+    "postinstall": "touch postinstall.txt"
   }
 }
