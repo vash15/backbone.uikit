@@ -37,7 +37,7 @@
   "dependencies": {
     "backbone": "^1.2.3",
     "underscore": "^1.8.3",
-    "underscore.string": "^3.3.4",
+    "underscore.string": "3.2.1",
     "context-utils": "^2.0.0",
     "device-utils": "^1.0.15",
     "backbone.pubsub": "^1.0.0",

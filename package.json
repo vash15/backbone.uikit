@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Backbone UIKit",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vash15/backbone.uikit.git"
@@ -27,5 +25,73 @@
   "bugs": {
     "url": "https://github.com/vash15/backbone.uikit/issues"
   },
-  "homepage": "https://github.com/vash15/backbone.uikit#readme"
+  "homepage": "https://github.com/vash15/backbone.uikit#readme",
+  "eve-components": [
+    {
+        "path": "./bower_components/jquery/dist/jquery.js",
+        "options": {
+            "expose": "jquery"
+        }
+    },
+    {
+        "path": "./bower_components/moment/moment.js",
+        "options": {
+            "expose": "moment"
+        }
+    },
+    {
+        "path": "./bower_components/underscore.string/dist/underscore.string.js",
+        "options": {
+            "expose": "underscore.string"
+        }
+    },
+    {
+        "path": "./bower_components/backbone/backbone.js",
+        "options": {
+            "expose": "backbone"
+        }
+    },
+    {
+        "path": "./bower_components/backbone.babysitter/lib/backbone.babysitter.js",
+        "options": {
+            "expose": "backbone.babysitter"
+        }
+    },
+    {
+        "path": "./bower_components/backbone.touch/backbone.touch.js",
+        "options": {
+            "expose": "backbone.touch"
+        }
+    },
+    {
+        "path": "./bower_components/async/lib/async.js",
+        "options": {
+            "expose": "async"
+        }
+    },
+    {
+        "path": "./bower_components/context-utils/lib/context.js",
+        "options": {
+            "expose": "context"
+        }
+    },
+    {
+        "path": "./bower_components/hammerjs/hammer.js",
+        "options": {
+            "expose": "hammerjs"
+        }
+    },
+    {
+        "path": "./bower_components/search-utils/lib/search.js",
+        "options": {
+            "expose": "search-utils"
+        }
+    },
+    {
+        "path": "./bower_components/impetus/dist/impetus.js",
+        "options": {
+            "expose": "impetus"
+        }
+    }
+  ]
 }

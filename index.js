@@ -5,7 +5,6 @@ module.exports = {
 	"PageView" : require("./lib/PageView"),
 	"ImageView": require("./lib/ImageView"),
 	"RateView" : require("./lib/RateView"),
-	
 	"dialogs"  : require("./lib/dialogs"),
 	"carousel" : require("./lib/carousel"),
 	"forms"    : require("./lib/forms"),
