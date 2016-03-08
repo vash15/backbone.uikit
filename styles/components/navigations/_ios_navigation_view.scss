@@ -1,0 +1,11 @@
+.ios-navigation-view{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 44px;
+}
+
+.ios .ios-navigation-view{
+	top: 44px + 20px;
+}
