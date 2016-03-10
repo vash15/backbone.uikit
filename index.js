@@ -1,11 +1,12 @@
 
 
 module.exports = {
+	"utils"      : require("./lib/utils"),
 	"BaseView"   : require("./lib/BaseView"),
 	"PageView"   : require("./lib/PageView"),
 	"ImageView"  : require("./lib/ImageView"),
 	"RateView"   : require("./lib/RateView"),
-	"navigation" : require('./lib/navigations'),
+	"navigations" : require('./lib/navigations'),
 	"dialogs"    : require("./lib/dialogs"),
 	"carousel"   : require("./lib/carousel"),
 	"forms"      : require("./lib/forms"),

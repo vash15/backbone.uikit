@@ -35,7 +35,7 @@
     "tests"
   ],
   "dependencies": {
-    "backbone": "^1.2.3",
+    "backbone": ">=1.2.3",
     "underscore": "^1.8.3",
     "underscore.string": "3.2.1",
     "context-utils": "^2.0.0",
