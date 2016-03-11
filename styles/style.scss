@@ -1,6 +1,6 @@
 //
 // Variabili globali
-// 
+//
 
 // $primary-color: #0D2B59;
 // $primary-color-active: #53002B;
@@ -72,6 +72,7 @@
 @import 'animations/slideOutBottom';
 
 // Components
+@import 'components/navigations/_navigation_view';
 @import 'components/navigations/_ios_bar_view';
 @import 'components/dialogs/_modal';
 @import 'components/listview/_listview';
