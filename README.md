@@ -80,6 +80,29 @@ Coming soon...
    - style
    - animate
 
+
+## How to recall
+
+#### Javascript
+
+```javascript
+
+// Ex.
+var BaseView  = require('backbone.uikit').BaseView;
+var PageView  = require('backbone.uikit').PageView;
+
+// Ex sub component
+var NavigationView = require('backbone.uikit').navigations.NavigationView;
+var IosBarView     = require('backbone.uikit').navigations.IosBarView;
+
+```
+
+#### SCSS
+
+```scss
+@import 'bower_components/backbone.uikit/styles/style';
+```
+
 ## Licence
 
 Released under MIT License (MIT) Copyright (c) 2016 Matteo Baggio & Michele Belluco
