@@ -32,7 +32,7 @@ Coming soon...
 
 ## Components
 
-- BaseView
+- [BaseView](./documentation/BaseView.md)
 - ImageView
 - PageView
 - RateView

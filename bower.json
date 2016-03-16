@@ -19,10 +19,10 @@
     "ui"
   ],
   "authors": [
-    { "name" : "Matteo Baggio", 
+    { "name" : "Matteo Baggio",
       "email" : "matteo.baggio@gmail.com"
     },
-    { "name" : "Michele Belluco", 
+    { "name" : "Michele Belluco",
       "email" : "michele@belluco.info"
     }
   ],
@@ -32,7 +32,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+	"documentation"
   ],
   "dependencies": {
     "backbone": ">=1.2.3",
