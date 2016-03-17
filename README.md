@@ -33,7 +33,7 @@ Coming soon...
 ## Components
 
 - [BaseView](./documentation/BaseView.md)
-- ImageView
+- [ImageView](./documentation/ImageView.md)
 - PageView
 - RateView
 - Navigation
