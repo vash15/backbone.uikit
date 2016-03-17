@@ -12,7 +12,7 @@ HTML prodotto:
 
 ```
 
-![Image View](ImageView.png)
+![Image View](img/ImageView.png)
 
 
 ## API
