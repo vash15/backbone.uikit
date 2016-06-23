@@ -103,6 +103,15 @@ var IosBarView     = require('backbone.uikit').navigations.IosBarView;
 @import 'bower_components/backbone.uikit/styles/style';
 ```
 
+
+#### Develop
+
+Ricreare l'indice dei compomenti
+
+```
+$ create-index  --update-index ./
+```
+
 ## Licence
 
 Released under MIT License (MIT) Copyright (c) 2016 Matteo Baggio & Michele Belluco
