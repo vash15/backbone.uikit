@@ -25,6 +25,13 @@ import IosBarView from './lib/navigations/IosBarView';
 import ModalView from './lib/dialogs/ModalView';
 import ImageViewModalView from './lib/dialogs/ImageViewModalView';
 
+// Forms View
+import FormView from './lib/forms/FormView';
+import TextField from './lib/forms/TextField';
+import SearchFilterView from './lib/forms/SearchFilterView';
+import SwitchView from './lib/forms/SwitchView';
+import SelectFieldView from './lib/forms/SelectFieldView';
+import CreditCardField from './lib/forms/CreditCardField';
 
 let index = {
 	requestAnimationFrame : requestAnimationFrame,
@@ -42,7 +49,13 @@ let index = {
 	TitleBarView          : TitleBarView,
 	IosBarView            : IosBarView,
 	ModalView             : ModalView,
-	ImageViewModalView    : ImageViewModalView
+	ImageViewModalView    : ImageViewModalView,
+	FormView              : FormView,
+	TextField             : TextField,
+	SearchFilterView      : SearchFilterView,
+	SwitchView            : SwitchView,
+	SelectFieldView       : SelectFieldView,
+	CreditCardField       : CreditCardField
 };
 
 
@@ -63,5 +76,11 @@ export {
 	TitleBarView          as TitleBarView,
 	IosBarView            as IosBarView,
 	ModalView             as ModalView,
-	ImageViewModalView    as ImageViewModalView
+	ImageViewModalView    as ImageViewModalView,
+	FormView              as FormView,
+	TextField             as TextField,
+	SearchFilterView      as SearchFilterView,
+	SwitchView            as SwitchView,
+	SelectFieldView       as SelectFieldView,
+	CreditCardField       as CreditCardField
 };
