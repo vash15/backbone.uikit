@@ -1,5 +1,5 @@
 
-.modal {
+.ui-modal {
 	@extend %fullscreen;
 	.overlay {
 		@extend %fullscreen;
@@ -76,7 +76,7 @@
 	}
 }
 
-.modal.lookup {
+.ui-modal.ui-modal-lookup {
 	.container {
 		top: 0;
 		right: 0;
@@ -111,18 +111,18 @@
 		}
 	}
 }
-.modal.lookup.pop .container {
+.ui-modal.ui-modal-lookup.pop .container {
 	-webkit-animation: slideOutRight 0.25s 0.15s;
 		animation: slideOutRight 0.25s 0.15s;
 	-webkit-animation-fill-mode: both;
 		animation-fill-mode: both;
 }
-.ios .modal.lookup {
+.ios .ui-modal.ui-modallookup {
 	.container{
 		top: 20px;
 	}
 }
-.android .modal {
+.android .ui-modal {
 	.overlay {
 		// background: none !important;
 	}
@@ -130,7 +130,7 @@
 
 
 
-.modal.imageView{
+.ui-modal.ui-modal-image{
 	z-index: 10100 !important;
 	// transition: opacity 200ms;
 
@@ -191,7 +191,7 @@
 	}
 }
 
-.ios .modal.imageView {
+.ios .ui-modal.ui-modal-image {
 	.toolbar{
 		top: 20px;
 	}
