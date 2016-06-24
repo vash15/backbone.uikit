@@ -25,7 +25,7 @@ let index = {
 	requestAnimationFrame : requestAnimationFrame,
 	style                 : style,
 	animate               : animate,
-	State:                : State,
+	State                 : State,
 	BaseView              : BaseView,
 	ImageView             : ImageView,
 	PageView              : PageView,
