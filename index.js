@@ -21,6 +21,11 @@ import BarView from './lib/navigations/BarView';
 import TitleBarView from './lib/navigations/TitleBarView';
 import IosBarView from './lib/navigations/IosBarView';
 
+// Dialogs view
+import ModalView from './lib/dialogs/ModalView';
+import ImageViewModalView from './lib/dialogs/ImageViewModalView';
+
+
 let index = {
 	requestAnimationFrame : requestAnimationFrame,
 	style                 : style,
@@ -35,7 +40,9 @@ let index = {
 	NavigationView        : NavigationView,
 	BarView               : BarView,
 	TitleBarView          : TitleBarView,
-	IosBarView            : IosBarView
+	IosBarView            : IosBarView,
+	ModalView             : ModalView,
+	ImageViewModalView    : ImageViewModalView
 };
 
 
@@ -54,5 +61,7 @@ export {
 	NavigationView        as NavigationView,
 	BarView               as BarView,
 	TitleBarView          as TitleBarView,
-	IosBarView            as IosBarView
+	IosBarView            as IosBarView,
+	ModalView             as ModalView,
+	ImageViewModalView    as ImageViewModalView
 };
