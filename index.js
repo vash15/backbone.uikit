@@ -8,6 +8,7 @@ import * as animate from './lib/utils/animate';
 import BaseView from './lib/BaseView';
 import ImageView from './lib/ImageView';
 import PageView from './lib/PageView';
+import RateView from './lib/RateView';
 
 // List View
 import ListView from './lib/listviews/ListView';
@@ -26,6 +27,7 @@ let index = {
 	BaseView              : BaseView,
 	ImageView             : ImageView,
 	PageView              : PageView,
+	RateView              : RateView,
 	ListView              : ListView,
 	ListItemView          : ListItemView,
 	NavigationView        : NavigationView,
@@ -43,6 +45,7 @@ export {
 	BaseView              as BaseView,
 	ImageView             as ImageView,
 	PageView              as PageView,
+	RateView              as RateView,
 	ListView              as ListView,
 	ListItemView          as ListItemView,
 	NavigationView        as NavigationView,
