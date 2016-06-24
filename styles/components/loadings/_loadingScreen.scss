@@ -1,4 +1,4 @@
-.loadingScreen {
+.ui-loading-screen {
 	@extend %fullscreen;
 	opacity: 0;
 	-webkit-animation: loadingScreenHide 100ms both;

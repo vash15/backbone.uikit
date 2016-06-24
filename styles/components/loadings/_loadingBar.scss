@@ -1,4 +1,4 @@
-.loadingBar {
+.ui-loading-bar {
 	display: none;
 	overflow: hidden;
 	position: absolute;
@@ -43,20 +43,20 @@
 		}
 	}
 }
-.doubleHeader .loadingBar {
+.doubleHeader .ui-loading-bar {
 	top: 88px;
 }
-.noHeader .loadingBar{
+.noHeader .ui-loading-bar{
 	top: 4px;
 	z-index: 20050 !important;
 }
-.ios .loadingBar {
+.ios .ui-loading-bar {
 	top: 44px + 20px;
 }
-.ios.doubleHeader .loadingBar {
+.ios.doubleHeader .ui-loading-bar {
 	top: 88px + 20px;
 }
-.ios.noHeader .loadingBar{
+.ios.noHeader .ui-loading-bar{
 	top: 4px + 20px;
 }
 
