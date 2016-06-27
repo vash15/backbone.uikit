@@ -34,6 +34,13 @@
 	        overflow-scrolling: touch;
 }
 
+.overflow-scroll {
+	@extend %scroll;
+}
+.overflow-scroll.horizontal {
+	@extend %hscroll;
+}
+
 // .hide {
 // 	display: none;
 // }
