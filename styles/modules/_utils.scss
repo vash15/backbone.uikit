@@ -9,7 +9,7 @@
 	overflow: hidden;
 }
 
-%fullscreen {
+%fullscreen, %fitContainer {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -39,6 +39,11 @@
 }
 .overflow-scroll.horizontal {
 	@extend %hscroll;
+}
+
+.deactivate .overflow-scroll {
+	-webkit-overflow-scrolling: none;
+	        overflow-scrolling: none;
 }
 
 // .hide {
