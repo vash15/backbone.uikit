@@ -1,4 +1,8 @@
 
+// Global lib
+import BackboneTouch from "backbone.touch";
+import DetectSwipe from "jquery-detect-swipe";
+
 // Utils
 import * as requestAnimationFrame from './lib/utils/requestAnimationFrame';
 import * as style from './lib/utils/style';
