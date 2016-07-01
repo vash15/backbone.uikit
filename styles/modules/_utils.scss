@@ -41,6 +41,11 @@
 	@extend %hscroll;
 }
 
+.deactivate .overflow-scroll {
+	-webkit-overflow-scrolling: none;
+	        overflow-scrolling: none;
+}
+
 // .hide {
 // 	display: none;
 // }

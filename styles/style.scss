@@ -31,6 +31,30 @@
 // $warning-color: #F5A623;
 // $prospect-color: #4A90E2;
 
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	// @ref: http://stackoverflow.com/a/10133679
+	// -webkit-backface-visibility: hidden;
+	// 	backface-visibility: hidden;
+	outline: none;
+}
+input, textarea {
+	-webkit-user-select: auto;
+	 -khtml-user-select: auto;
+	   -moz-user-select: auto;
+		-ms-user-select: auto;
+			user-select: auto;
+}
+
 @if variable-exists(icon-font) == false {
 	$icon-font: '';
 }
@@ -75,6 +99,7 @@
 @import 'components/navigations/_navigation_view';
 @import 'components/navigations/_ios_bar_view';
 @import 'components/dialogs/_modal';
+@import 'components/forms/_search_filter';
 @import 'components/loadings/_loading';
 @import 'components/loadings/_loadingBar';
 @import 'components/loadings/_loadingScreen';
