@@ -1,7 +1,7 @@
 
 // Global lib
-import BackboneTouch from "backbone.touch";
-import DetectSwipe from "jquery-detect-swipe";
+// import BackboneTouch from "backbone.touch";
+// import DetectSwipe from "jquery-detect-swipe";
 
 // Utils
 import * as requestAnimationFrame from './lib/utils/requestAnimationFrame';
@@ -27,7 +27,7 @@ import IosBarView from './lib/navigations/IosBarView';
 
 // Dialogs view
 import ModalView from './lib/dialogs/ModalView';
-import ImageViewModalView from './lib/dialogs/ImageViewModalView';
+import ImageModalView from './lib/dialogs/ImageModalView';
 
 // Forms View
 import FormView from './lib/forms/FormView';
@@ -53,7 +53,7 @@ let index = {
 	TitleBarView          : TitleBarView,
 	IosBarView            : IosBarView,
 	ModalView             : ModalView,
-	ImageViewModalView    : ImageViewModalView,
+	ImageModalView        : ImageModalView,
 	FormView              : FormView,
 	TextField             : TextField,
 	SearchFilterView      : SearchFilterView,
@@ -80,7 +80,7 @@ export {
 	TitleBarView          as TitleBarView,
 	IosBarView            as IosBarView,
 	ModalView             as ModalView,
-	ImageViewModalView    as ImageViewModalView,
+	ImageModalView        as ImageModalView,
 	FormView              as FormView,
 	TextField             as TextField,
 	SearchFilterView      as SearchFilterView,
