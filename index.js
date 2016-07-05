@@ -27,7 +27,7 @@ import IosBarView from './lib/navigations/IosBarView';
 
 // Dialogs view
 import ModalView from './lib/dialogs/ModalView';
-import ImageModalView from './lib/dialogs/ImageModalView';
+import ImagesModalView from './lib/dialogs/ImagesModalView';
 
 // Forms View
 import FormView from './lib/forms/FormView';
@@ -53,7 +53,7 @@ let index = {
 	TitleBarView          : TitleBarView,
 	IosBarView            : IosBarView,
 	ModalView             : ModalView,
-	ImageModalView        : ImageModalView,
+	ImagesModalView       : ImagesModalView,
 	FormView              : FormView,
 	TextField             : TextField,
 	SearchFilterView      : SearchFilterView,
@@ -80,7 +80,7 @@ export {
 	TitleBarView          as TitleBarView,
 	IosBarView            as IosBarView,
 	ModalView             as ModalView,
-	ImageModalView        as ImageModalView,
+	ImagesModalView       as ImagesModalView,
 	FormView              as FormView,
 	TextField             as TextField,
 	SearchFilterView      as SearchFilterView,

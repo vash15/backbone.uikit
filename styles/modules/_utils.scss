@@ -18,8 +18,8 @@
 }
 %noScroll {
 	overflow: initial;
-	-webkit-overflow-scrolling: none;
-	        overflow-scrolling: none;
+	-webkit-overflow-scrolling: auto;
+	        overflow-scrolling: auto;
 }
 %scroll {
 	overflow-x: hidden;
@@ -42,8 +42,8 @@
 }
 
 .deactivate .overflow-scroll {
-	-webkit-overflow-scrolling: none;
-	        overflow-scrolling: none;
+	-webkit-overflow-scrolling: auto !important;
+	        overflow-scrolling: auto !important;
 }
 
 // .hide {
