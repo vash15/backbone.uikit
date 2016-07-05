@@ -2,7 +2,6 @@
 	position: relative;
 	box-sizing: border-box;
 	overflow: hidden;
-	background-color: white;
 	font-size: 14px;
 	padding: 7px 8px;
 
@@ -15,7 +14,8 @@
 		will-change: all;
 		transition: transform 300ms;
 		input {
-			width: 100%;
+			width: calc(100% - 60px);
+			margin-left: 30px;
 			text-align: center;
 			color: black;
 			border-radius: 0;
@@ -107,9 +107,7 @@
 			transform: translate3d(0, 0, 0);
 			width: calc(100% - 70px);
 			input {
-				width: calc(100% - 60px);
 				text-align: left;
-				margin-left: 30px;
 			}
 		}
 		.cancel {
