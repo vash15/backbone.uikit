@@ -1,0 +1,83 @@
+
+.ui-image-zoom-modal{
+	width: 100%;
+	height: 100%;
+}
+
+.ui-images-modal{
+	@extend %fullscreen;
+	background: #FFF;
+
+	.ui-images-modal-toolbar{
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		height: 44px;
+		z-index: 100;
+		.ui-images-modal-close{
+			display: block;
+			width: 44px;
+			height: 44px;
+			line-height: 44px;
+			text-align: center;
+		}
+	}
+
+	.ui-image-modal-carousel-container{
+		height: 100%;
+		width: 100%;
+		.swiper-wrapper{}
+		.ui-image-modal-carousel-navigation-indicator{
+			bottom: 0;
+		}
+	}
+
+	.ui-image-modal-navigation-container{
+		display: none;
+		box-sizing: border-box;
+		.swiper-slide {
+	        height: 100%;
+			// width: 25%;
+	        // opacity: 0.4;
+			img{
+				height: 100%;
+			}
+	    }
+		.swiper-slide-active {
+	        // opacity: 1;
+	    }
+	}
+
+	&.ui-images-modal-has-thumbnails{
+
+		.ui-image-modal-carousel-container{
+			height: 100%;
+			width: 100%;
+			.swiper-wrapper{
+				height: calc( 100% - 55px );
+			}
+			.ui-image-modal-carousel-navigation-indicator{
+				display: none;
+			}
+		}
+
+		.ui-image-modal-navigation-container{
+			display: block;
+			height: 55px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+	}
+
+
+}
+
+.ios .ui-images-modal{
+	.ui-images-modal-toolbar{
+		padding-top: 20px;
+	}
+}
