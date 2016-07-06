@@ -17,11 +17,9 @@ Coming soon...
 - [backbone.pubsub](https://github.com/vash15/pubsub)
 - [backbone.babysitter](https://github.com/marionettejs/backbone.babysitter)
 - [backbone.touch](https://github.com/vash15/backbone.touch)
-- [hammerjs](http://hammerjs.github.io/)
 - [moment](http://momentjs.com/)
 - [async](https://github.com/caolan/async)
 - [impetus](http://chrisbateman.github.io/impetus/)
-- [leaflet](http://leafletjs.com/)
 - [search-utils](https://github.com/vash15/search-utils)
 - [context-utils](https://github.com/SonoIo/context-utils)
 - [device-utils](https://github.com/SonoIo/device-utils)
@@ -34,7 +32,7 @@ Coming soon...
 
 - [BaseView](./documentation/BaseView.md)
 - [ImageView](./documentation/ImageView.md)
-- PageView
+- [PageView](./documentation/PageView.md)
 - RateView
 - Navigation
    - NavigationView
@@ -42,23 +40,11 @@ Coming soon...
    - TitleBarView
    - IosBarView
 - Dialogs
-   - ImageViewModalView
-   - LookupListView
-   - LookupModalView
+   - ImagesModalView
    - ModalView
 - List
    - ListView
-   - FilteredListView
-   - GroupListView
-   - HorizontalListView
-   - InfiniteListView
-   - RemoteListView
-   - SnapListView
-   - PaginatedListView
    - ListItemView
-   - GroupListItemView
-   - OptionListItemView
-   - OptionListView
 - Form
    - FormView
    - TextField
@@ -67,18 +53,11 @@ Coming soon...
    - SearchFilterView
    - SelectField
    - SwitchView
-- Carousel
-   - CarouselView
-   - BreadcrumbView
-- Loading
-   - LoadingBarView
-   - LoadingScreenView
-- Map
-   - FilteredMapView
-   - MapView
 - Utils
    - style
    - animate
+   - requestAnimationFrame
+   - State
 
 
 ## How to recall
@@ -87,13 +66,8 @@ Coming soon...
 
 ```javascript
 
-// Ex.
-var BaseView  = require('backbone.uikit').BaseView;
-var PageView  = require('backbone.uikit').PageView;
+import { BaseView, PageView, NavigationView, ... } from 'backbone.uikit';
 
-// Ex sub component
-var NavigationView = require('backbone.uikit').navigations.NavigationView;
-var IosBarView     = require('backbone.uikit').navigations.IosBarView;
 
 ```
 
@@ -101,15 +75,6 @@ var IosBarView     = require('backbone.uikit').navigations.IosBarView;
 
 ```scss
 @import 'bower_components/backbone.uikit/styles/style';
-```
-
-
-#### Develop
-
-Ricreare l'indice dei compomenti
-
-```
-$ create-index  --update-index ./
 ```
 
 ## Licence

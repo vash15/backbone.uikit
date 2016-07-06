@@ -16,55 +16,72 @@ Page View
 
 ```javascript
 
-var PageView = require('backbone.uikit').PageView;
+import { PageView, IosBarView } from 'backbone.uikit';
 
-var HomePageView = PageView.extend({
+export default class HomePage extends PageView {
 
-	addClass: 'home-page',
+	addClass(){
+		return 'home-page';
+	}
 
-	template: '<h1>Home page</h1>',
+	constructor(){
+		super(options);
 
-	initialize: function initialize(options) {
-		HomePageView.__super__.initialize.apply(this, arguments);
-	},
+		this.setSubView('navigationBar',new IosBarView({
+			addClass: 'back-bar',
+			left: 'f',
+			center: null
+		}) );
 
-	render: function render() {
-		HomePageView.__super__.render.apply(this, arguments);
-		this.$el.empty().append(this.template() );
+	}
+
+	getNavigationBar() {
+		return this.getSubView('navigationBar');
+	}
+
+	onRender(rendered) {
+		if ( rendered )
+			return this;
+
+		// Do..
+
 		return this;
-	},
-
+	}
 
 	//
 	// Events / Hook
 	//
 
-	onBeforePush: function() {
+	onBeforePush() {
 		console.log("HomePage: onBeforePush");
-	},
+	}
 
-	onPush: function() {
+	onPush() {
 		console.log("HomePage: onPush");
-	},
+	}
 
-	onBeforeActivate: function() {
+	onBeforeActivate() {
 		console.log("HomePage: onBeforeActivate");
-	},
+	}
 
-	onActivate: function() {
+	onActivate() {
+		super.onActivate(); // Important!
+		this.$el.addClass('overflow-scroll'); // For enabled css touch scroll
+
 		console.log("HomePage: onActivate");
-	},
+	}
 
-	onBeforeDeactivate: function() {
+	onBeforeDeactivate() {
 		console.log("HomePage: onBeforeDeactivate");
-	},
+	}
 
-	onDeactivate: function() {
+	onDeactivate() {
+		super.onDeactivate(); // Important!
+		this.$el.removeClass('overflow-scroll'); // For removed css touch scroll and block event scroll into view
+
 		console.log("HomePage: onDeactivate");
 	}
 
-
-});
-
+}
 
 ```

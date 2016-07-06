@@ -10,8 +10,7 @@ Base View
 #### touchActiveClassName
 È il nome della classe CSS da applicare quando l'elemto è "attivo". Default: `active-state`
 
-#### addClass
-Può essere una stringa o una funzione e serve per comporre il nome CSS della classe.
+
 
 ### Methods
 
@@ -20,19 +19,33 @@ Può essere una stringa o una funzione e serve per comporre il nome CSS della cl
 Options:
 - `removeOnDestroy` Default: `true`
 
-#### findPlaceholder(name)
-Trova un elemento html all'interno della view avente la il data `data-placeholder` uguale al `name`.
 
-#### appendAndRenderToPlaceholder(name, view)
-Trova un elemento html all'interno della view avente la il data `data-placeholder` uguale al `name`. Una volta trovato, appende la view e la renderizza.
+#### addClass()
+Può essere una stringa o una funzione e serve per comporre il nome CSS della classe.
 
-#### destroy
+### setState(state)
+Imposta lo state attuale alla view.
+
+### getState()
+Ritorna lo state.
+
+### addEvents(events)
+
+
+### addSubView(name, view, state)
+
+
+### getSubView(name)
+
+
+
+#### destroy()
 Rimuove la view dal DOM, spegne gli eventi ad essa associata e richiama l'evento `onDestroy`.
 
 #### setZindex(zIndex)
 Imposta uno z-index alla view. `zIndex` deve essere un intero positivo.
 
-#### getZindex
+#### getZindex()
 Ritorno lo z-index della view.
 
 #### addEvents(events)
@@ -48,30 +61,38 @@ Viene richiamato al destroy della view. Se la view possiede delle view figlie, q
 
 ```javascript
 
-var BaseView = require('backbone.uikit').BaseView;
+import { BaseView } from 'backbone.uikit';
 
-var MyView = BaseView.extend({
+export default class MyView extends BaseView {
 
-	addClass: 'my-view',
-
-	initialize: function(){
-		MyView.__super__.initialize.apply(this, arguments);
-
-		this.views.labelView = new LabelView({ message: '42!' });
-
-	},
-
-	render: function(){
-		this.$el.empty().append( this.views.labelView.el );
-		this.views.labelView.render();
-		return this;
-	},
-
-	onDestroy: function () {
-		console.log('onDestroy view');
-		MyView.__super__.onDestroy.apply(this, arguments);
+	addClass(){
+		return 'my-view';
 	}
 
-});
+	constructor(options){
+		super(options);
+
+		// Adding a sub view width state
+		this.addSubView('labelView', new LabelView({ message: '42!' }), this.getState() );
+
+	}
+
+	onRender(rendered){
+		if ( rendered )
+			return this;
+
+		let labelView = this.getSubView('labelView');
+		this.$el.empty().append( labelView.el );
+		labelView.render();
+
+		return this;
+	}
+
+	onDestroy(options){
+		console.log('on destroy My View!');
+		super.onDestroy(options);
+	}
+
+}
 
 ```

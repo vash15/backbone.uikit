@@ -38,32 +38,37 @@ If `value` is undefined than return the `height` image. Otherwise set the height
 
 ```javascript
 
-var BaseView  = require('backbone.uikit').BaseView;
-var ImageView = require('backbone.uikit').ImageView;
+import { BaseView, ImageView } from 'backbone.uikit';
 
-var MyView = BaseView.extend({
+export default class MyView extends BaseView {
 
-	addClass: 'my-view',
+	addClass(){
+		return 'my-view';
+	}
 
-	initialize: function(){
-		MyView.__super__.initialize.apply(this, arguments);
+	constructor(options) {
+		super(options);
 
-		this.views.coverImage = new ImageView({
+		this.addSubView('coverImage', new ImageView({
 			src: 'http://placehold.it/350x150',
 			placeholder: 'img/placeholder-cover-image.png',
 			size: 'auto',
 			viewport: { width: 250, height: 100 }
 		});
 
-	},
+	}
 
-	render: function () {
+	onRender(rendered){
+		if ( rendered )
+			return this;
 
-		this.$el.empty().append( this.views.coverImage.el );
-		this.views.coverImage.render();
+		let coverImage = this.getSubView('coverImage');
+		this.$el.find('.js-container-cover-image').append( coverImage.el );
+		coverImage.render();
 
 		return this;
 	}
+
 }
 
 ```
@@ -82,10 +87,18 @@ var MyView = BaseView.extend({
 
 ```scss
 
-.image{
+.ui-image{
 	position: relative;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+
+	img{
+		font-size: 0;
+	}
 
 	&.center img{
 		position: absolute;
@@ -93,7 +106,7 @@ var MyView = BaseView.extend({
 		top: 50%;
 		left: 50%;
 	}
-
+	
 	&.top-left img{
 		display: block;
 		margin-top: 0 !important;
@@ -101,4 +114,5 @@ var MyView = BaseView.extend({
 	}
 
 }
+
 ```
