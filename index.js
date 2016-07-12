@@ -35,6 +35,7 @@ import TextField from './lib/forms/TextField';
 import SearchFilterView from './lib/forms/SearchFilterView';
 import SwitchView from './lib/forms/SwitchView';
 import SelectField from './lib/forms/SelectField';
+import CheckboxField from './lib/forms/CheckboxField';
 import CreditCardField from './lib/forms/CreditCardField';
 
 let index = {
@@ -60,7 +61,8 @@ let index = {
 	SearchFilterView          : SearchFilterView,
 	SwitchView                : SwitchView,
 	SelectField               : SelectField,
-	CreditCardField           : CreditCardField
+	CreditCardField           : CreditCardField,
+	CheckboxField             : CheckboxField
 };
 
 
@@ -88,5 +90,6 @@ export {
 	SearchFilterView          as SearchFilterView,
 	SwitchView                as SwitchView,
 	SelectField               as SelectField,
-	CreditCardField           as CreditCardField
+	CreditCardField           as CreditCardField,
+	CheckboxField             as CheckboxField
 };
