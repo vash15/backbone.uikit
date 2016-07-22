@@ -17,6 +17,7 @@ Options:
 
 - `src` Specifies the URL of an image.
 - `placeholder` this is the temporary image. The default is a transparent one pixel image.
+- `autoload` ... Default: `true`.
 - `size` fits the image to its container. Values:
    - `auto`: if the image is vertically will apply the `cover` style horizontal otherwise if you will apply the` contain` style.
    - `normal`: the image is not resized.
@@ -26,6 +27,11 @@ Options:
 - `className` name of CSS class. Default: `image`.
 - `position` it indicates how to place the image. It will be used as `className`. The values are `center` or `top-left`. Default: `center`.
 - `viewport` it is the viewport image. Default is the container itself. The object must be: `{ width: <number>, height: <number> }`.
+
+### setSource(src)
+
+
+### load()
 
 #### width([value])
 If `value` is undefined than return the `width` image. Otherwise set the width.
@@ -106,7 +112,7 @@ export default class MyView extends BaseView {
 		top: 50%;
 		left: 50%;
 	}
-	
+
 	&.top-left img{
 		display: block;
 		margin-top: 0 !important;
