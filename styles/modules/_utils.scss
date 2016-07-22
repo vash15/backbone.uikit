@@ -64,4 +64,13 @@
 	@else if $media == extraSmallPhone {
 		@media only screen and ( max-height: 400px ) { @content; }
 	}
+	@else if $media == tablet {
+		@media only screen and ( min-width: 600px ) { @content; }
+	}
+	@else if $media == potraitTablet {
+		@media only screen and ( min-width: 600px ) and ( max-width: 1024px ){ @content; }
+	}
+	@else if $media == landscapeTablet {
+		@media only screen and ( min-width: 1025px ) { @content; }
+	}
 }
