@@ -1,69 +1,45 @@
 
 .ui-modal {
-	@extend %fullscreen;
+	@extend %fitContainer;
 	.overlay {
-		@extend %fullscreen;
+		@extend %fitContainer;
 		background-color: $overlay-color;
+		z-index: 0;
 	}
 	& > .container {
-		@extend %fullscreen;
+		@extend %fitContainer;
+		z-index: 1;
 		// right: auto;
 		// width: 485px;
 		// background-color: white;
 		// box-shadow: 0 0 30px rgba(0,0,0,0.5);
 		// -webkit-animation: slideInLeft 0.25s;
-		& > .title {
-			height: $toolbar-height;
-			line-height: $toolbar-height;
-			padding: 20px 10px 0 10px;
-			margin: 0;
-		}
 		& > .content {
-			@extend %fullscreen;
-			@extend %scroll;
+			@extend %fitContainer;
 			bottom: $toolbar-height;
 		}
 	}
-	.withTitle > .content, .withFilter > .content {
-		top: $toolbar-height + $statusbar-height;
-	}
-	.withTitle.withFilter > .content {
-		top: ($toolbar-height + $statusbar-height) * 2;
-	}
 	.toolbar {
+		position: absolute;
+		bottom: 0;
 		text-align: left;
-		.remove, .disconnect {
-			float: right;
-			margin-top: 3px;
-		}
-		// &:before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	top: -10px;
-		// 	left: 0;
-		// 	right: 0;
-		// 	height: 10px;
-		// 	background: url(../img/cart-shadow.png) no-repeat center top;
-		// 	background-size: 264px 15px;
-		// }
 	}
 	.searchFilter {
 		margin: 0 20px;
 	}
 }
 
-.ios .modal > .container {
-	top: 20px;
-	&:before {
-		content: '';
-		// background-color: rgba(255,255,255,0.3);
-		position: absolute;
-		top: -20px;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
-}
+// .ios .modal > .container {
+// 	&:before {
+// 		content: '';
+// 		// background-color: rgba(255,255,255,0.3);
+// 		position: absolute;
+// 		top: -20px;
+// 		bottom: 0;
+// 		left: 0;
+// 		right: 0;
+// 	}
+// }
 
 .modal.pop {
 	.overlay {
@@ -88,10 +64,10 @@
 		background-color: #FFF;
 		will-change: transform, -webkit-transform, box-shadow;
 
-		-webkit-animation: slideInRight 0.25s;
-				animation: slideInRight 0.25s;
-		-webkit-animation-fill-mode: none;
-				animation-fill-mode: none;
+		// -webkit-animation: slideInRight 0.25s;
+		// 		animation: slideInRight 0.25s;
+		// -webkit-animation-fill-mode: none;
+		// 		animation-fill-mode: none;
 
 		.title {
 			padding-bottom: 10px;
@@ -111,12 +87,12 @@
 		}
 	}
 }
-.ui-modal.ui-modal-lookup.pop .container {
-	-webkit-animation: slideOutRight 0.25s 0.15s;
-		animation: slideOutRight 0.25s 0.15s;
-	-webkit-animation-fill-mode: both;
-		animation-fill-mode: both;
-}
+// .ui-modal.ui-modal-lookup.pop .container {
+// 	-webkit-animation: slideOutRight 0.25s 0.15s;
+// 		animation: slideOutRight 0.25s 0.15s;
+// 	-webkit-animation-fill-mode: both;
+// 		animation-fill-mode: both;
+// }
 .ios .ui-modal.ui-modallookup {
 	.container{
 		top: 20px;
