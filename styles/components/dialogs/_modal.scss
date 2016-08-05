@@ -28,6 +28,16 @@
 		margin: 0 20px;
 	}
 }
+.ui-modal.pop {
+	.overlay {
+		// -webkit-animation: fadeOut 0.25s 0.25s;
+		// -webkit-animation-fill-mode: both;
+	}
+	.container {
+		// -webkit-animation: slideOutLeft 0.25s 0.15s;
+		// -webkit-animation-fill-mode: both;
+	}
+}
 
 // .ios .modal > .container {
 // 	&:before {
@@ -41,15 +51,8 @@
 // 	}
 // }
 
-.modal.pop {
-	.overlay {
-		// -webkit-animation: fadeOut 0.25s 0.25s;
-		// -webkit-animation-fill-mode: both;
-	}
-	.container {
-		// -webkit-animation: slideOutLeft 0.25s 0.15s;
-		// -webkit-animation-fill-mode: both;
-	}
+.ui-modal.ui-navigation-modal {
+
 }
 
 .ui-modal.ui-modal-lookup {

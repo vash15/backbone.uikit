@@ -28,6 +28,7 @@ import IosBarView from './lib/navigations/IosBarView';
 // Dialogs view
 import ModalView from './lib/dialogs/ModalView';
 import ImagesModalView from './lib/dialogs/ImagesModalView';
+import NavigationModalView from './lib/dialogs/NavigationModalView';
 
 // Forms View
 import FormView from './lib/forms/FormView';
@@ -37,6 +38,8 @@ import SwitchView from './lib/forms/SwitchView';
 import SelectField from './lib/forms/SelectField';
 import CheckboxField from './lib/forms/CheckboxField';
 import CreditCardField from './lib/forms/CreditCardField';
+import LookupField from './lib/forms/LookupField';
+import LookupPage from './lib/forms/LookupPage';
 
 let index = {
 	requestAnimationFrame     : requestAnimationFrame,
@@ -56,13 +59,16 @@ let index = {
 	IosBarView                : IosBarView,
 	ModalView                 : ModalView,
 	ImagesModalView           : ImagesModalView,
+	NavigationModalView       : NavigationModalView,
 	FormView                  : FormView,
 	TextField                 : TextField,
 	SearchFilterView          : SearchFilterView,
 	SwitchView                : SwitchView,
 	SelectField               : SelectField,
 	CreditCardField           : CreditCardField,
-	CheckboxField             : CheckboxField
+	CheckboxField             : CheckboxField,
+	LookupField               : LookupField,
+	LookupPage                : LookupPage
 };
 
 
@@ -84,6 +90,7 @@ export {
 	TitleBarView              as TitleBarView,
 	IosBarView                as IosBarView,
 	ModalView                 as ModalView,
+	NavigationModalView       as NavigationModalView,
 	ImagesModalView           as ImagesModalView,
 	FormView                  as FormView,
 	TextField                 as TextField,
@@ -91,5 +98,7 @@ export {
 	SwitchView                as SwitchView,
 	SelectField               as SelectField,
 	CreditCardField           as CreditCardField,
-	CheckboxField             as CheckboxField
+	CheckboxField             as CheckboxField,
+	LookupField               as LookupField,
+	LookupPage                as LookupPage
 };
