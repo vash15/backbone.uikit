@@ -18,7 +18,7 @@ Base View
 
 Options:
 - `removeOnDestroy` Default: `true`
-
+- `state` Default: `null`
 
 #### addClass()
 Può essere una stringa o una funzione e serve per comporre il nome CSS della classe.
@@ -37,6 +37,9 @@ Ritorna lo state.
 
 ### getSubView(name)
 
+
+### setDefaultsOptions(defaults)
+Set the default options of the view. The accepted parameter is an object.
 
 
 #### destroy()
@@ -72,8 +75,12 @@ export default class MyView extends BaseView {
 	constructor(options){
 		super(options);
 
+		this.setDefaultsOptions({
+			message: '42!'
+		});
+
 		// Adding a sub view width state
-		this.addSubView('labelView', new LabelView({ message: '42!' }), this.getState() );
+		this.addSubView('labelView', new LabelView({ message: this.options.message }), this.getState() );
 
 	}
 
