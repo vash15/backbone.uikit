@@ -66,8 +66,6 @@ export default class HomePage extends PageView {
 
 	onActivate() {
 		super.onActivate(); // Important!
-		this.$el.addClass('overflow-scroll'); // For enabled css touch scroll
-
 		console.log("HomePage: onActivate");
 	}
 
@@ -77,9 +75,12 @@ export default class HomePage extends PageView {
 
 	onDeactivate() {
 		super.onDeactivate(); // Important!
-		this.$el.removeClass('overflow-scroll'); // For removed css touch scroll and block event scroll into view
-
 		console.log("HomePage: onDeactivate");
+	}
+
+	onBeforePop(){
+		super.onBeforePop();
+		console.log("HomePage: onBeforePop");
 	}
 
 }
