@@ -74,3 +74,15 @@
 		@media only screen and ( min-width: 1025px ) { @content; }
 	}
 }
+
+// Incrementa l'area cliccabile
+@mixin touchable($size: 10px) {
+	&:after {
+		position: absolute;
+		content: '';
+		top: -$size;
+		right: -$size;
+		bottom: -$size;
+		left: -$size;
+	}
+}
