@@ -46,6 +46,12 @@
 	        overflow-scrolling: auto !important;
 }
 
+.overflow-scroll.deactivate {
+	-webkit-overflow-scrolling: auto !important;
+	        overflow-scrolling: auto !important;
+}
+
+
 // .hide {
 // 	display: none;
 // }
