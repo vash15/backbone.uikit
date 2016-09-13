@@ -92,3 +92,11 @@
 		left: -$size;
 	}
 }
+
+// Center box
+@mixin center-box($top, $left) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translate3d(-50%, -50%, 0);
+}
