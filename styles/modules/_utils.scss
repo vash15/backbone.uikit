@@ -35,8 +35,11 @@
 }
 %center-flex-box{
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+		flex-direction: column;
+	-webkit-justify-content: center;
+		justify-content: center;
 }
 
 
@@ -105,4 +108,17 @@
 	top: $top;
 	left: $left;
 	transform: translate3d(-50%, -50%, 0);
+}
+
+// Text truncate on multi-line
+@mixin text-truncate($line) {
+	@if $line == 1 {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}@else{
+		display: -webkit-box;
+		-webkit-line-clamp: $line;
+		-webkit-box-orient: vertical;
+	}
 }
