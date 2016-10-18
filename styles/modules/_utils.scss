@@ -50,11 +50,9 @@
 	@extend %hscroll;
 }
 
-.deactivate .overflow-scroll {
-	-webkit-overflow-scrolling: auto !important;
-	        overflow-scrolling: auto !important;
-}
-
+.swipe-back .overflow-scroll,
+.deactivate .overflow-scroll,
+.overflow-scroll.swipe-back,
 .overflow-scroll.deactivate {
 	-webkit-overflow-scrolling: auto !important;
 	        overflow-scrolling: auto !important;
