@@ -9,6 +9,7 @@ import * as style from './lib/utils/style';
 import * as animate from './lib/utils/animate';
 import State from './lib/utils/State';
 import BezierEasing from './lib/utils/BezierEasing';
+import search from './lib/utils/search';
 
 // View Base
 import BaseView from './lib/BaseView';
@@ -47,6 +48,7 @@ let index = {
 	requestNextAnimationFrame : requestNextAnimationFrame,
 	style                     : style,
 	BezierEasing              : BezierEasing,
+	search                    : search,
 	animate                   : animate,
 	State                     : State,
 	BaseView                  : BaseView,
@@ -80,6 +82,7 @@ export {
 	requestNextAnimationFrame as requestNextAnimationFrame,
 	style                     as style,
 	BezierEasing              as BezierEasing,
+	search                    as search,
 	animate                   as animate,
 	State                     as State,
 	BaseView                  as BaseView,
