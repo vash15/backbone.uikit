@@ -77,6 +77,11 @@ import { BaseView, PageView, NavigationView, ... } from 'backbone.uikit';
 @import 'bower_components/backbone.uikit/styles/style';
 ```
 
+## ListView
+
+Event `change:direction` triggered when a user change the scroll direction. Top bounce doesn't trigger the event. Bottom bounce does.
+
+
 ## Licence
 
 Released under MIT License (MIT) Copyright (c) 2016 Matteo Baggio & Michele Belluco
