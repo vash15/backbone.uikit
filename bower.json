@@ -47,8 +47,7 @@
     "backbone.touch": "https://github.com/vash15/backbone.touch.git#^0.4.3",
     "search-utils": "^1.0.0",
     "impetus": "https://github.com/SonoIo/impetus.git#^0.9.0",
-    "pinch-zoom-canvas": "^1.0.1",
-    "jquery-detect-swipe": "https://github.com/vash15/detect_swipe.git#^2.1.3"
+    "pinch-zoom-canvas": "^1.0.1"
   },
   "resolutions": {
     "jquery": "^3.0.0",
