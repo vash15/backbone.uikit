@@ -81,10 +81,10 @@
 		@media only screen and ( min-width: 600px ) { @content; }
 	}
 	@else if $media == potraitTablet {
-		@media only screen and ( min-width: 600px ) and ( max-width: 1024px ){ @content; }
+		@media only screen and ( min-width: 600px ) and ( max-width: 1023px ){ @content; }
 	}
 	@else if $media == landscapeTablet {
-		@media only screen and ( min-width: 1025px ) { @content; }
+		@media only screen and ( min-width: 1024px ) { @content; }
 	}
 }
 
