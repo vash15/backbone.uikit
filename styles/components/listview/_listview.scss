@@ -10,11 +10,9 @@
 	}
 
 	.empty p {
-		font-size: 34px;
-		padding: 60px 40px 20px 40px;
 		text-align: center;
 	}
-	.loadMore {
+	.list-load-more {
 		// Spinner
 		padding: 20px 0;
 		height: 50px;
@@ -24,23 +22,23 @@
 	}
 }
 
-.listItem {
+.list-item {
 	box-sizing: border-box;
 }
-.listItem.active-state {}
+.list-item.active-state {}
 
-.optionList {
+.option-list {
 	@extend .list;
 
-	.listItem {}
-	.listItem.active-state {}
+	.list-item {}
+	.list-item.active-state {}
 }
 
-.groupList {
+.group-list {
 	@extend .list;
 	padding-top: 10px;
 
-	.groupListItem {
+	.group-list-item {
 		font-size: 0;
 		padding: 10px 0 10px 10px;
 		clear: both;
@@ -58,18 +56,7 @@
 		}
 	}
 
-	.groupTitle, .timeAgo, .date {
-		background-color: white;
-		padding-right: 10px;
-		text-transform: uppercase;
-	}
-	.timeAgo {
-		padding-right: 0;
-	}
-	.date {
-		padding: 0 10px;
-	}
+
 	.separator {}
 
 }
-

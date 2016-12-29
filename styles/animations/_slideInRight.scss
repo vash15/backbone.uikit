@@ -1,13 +1,8 @@
 
 @include keyframe ("slideInRight"){
-	0%, 99%, 100% {
-		// box-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
-		// -webkit-transition-timing-function: ease-in;
-		// transition-timing-function: ease-in;
-	}
 	0% {
-		-webkit-transform: translate3d(1000px, 0, 0);
-		transform: translate3d(1000px, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
 	}
 	99% {
 		-webkit-transform: translate3d(0, 0, 0);

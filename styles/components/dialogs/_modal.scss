@@ -7,10 +7,10 @@
 	}
 	& > .container {
 		@extend %fullscreen;
-		right: auto;
-		width: 485px;
-		background-color: white;
-		box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		// right: auto;
+		// width: 485px;
+		// background-color: white;
+		// box-shadow: 0 0 30px rgba(0,0,0,0.5);
 		// -webkit-animation: slideInLeft 0.25s;
 		& > .title {
 			height: $toolbar-height;
@@ -56,7 +56,7 @@
 	top: 20px;
 	&:before {
 		content: '';
-		background-color: rgba(255,255,255,0.3);
+		// background-color: rgba(255,255,255,0.3);
 		position: absolute;
 		top: -20px;
 		bottom: 0;
@@ -124,7 +124,7 @@
 }
 .android .modal {
 	.overlay {
-		background: none !important;
+		// background: none !important;
 	}
 }
 
