@@ -25,7 +25,8 @@ import ListItemView from './lib/listviews/ListItemView';
 import NavigationView from './lib/navigations/NavigationView';
 import BarView from './lib/navigations/BarView';
 import TitleBarView from './lib/navigations/TitleBarView';
-import IosBarView from './lib/navigations/IosBarView';
+import OsBarView from './lib/navigations/OsBarView';
+const IosBarView = OsBarView;
 
 // Dialogs view
 import ModalView from './lib/dialogs/ModalView';
@@ -59,6 +60,7 @@ let index = {
 	NavigationView            : NavigationView,
 	BarView                   : BarView,
 	TitleBarView              : TitleBarView,
+	// OsBarView                 : OsBarView,
 	IosBarView                : IosBarView,
 	ModalView                 : ModalView,
 	ImagesModalView           : ImagesModalView,
@@ -93,6 +95,7 @@ export {
 	NavigationView            as NavigationView,
 	BarView                   as BarView,
 	TitleBarView              as TitleBarView,
+	// OsBarView                 as OsBarView,
 	IosBarView                as IosBarView,
 	ModalView                 as ModalView,
 	NavigationModalView       as NavigationModalView,
