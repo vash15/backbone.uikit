@@ -6,7 +6,7 @@
 // Utils
 import requestNextAnimationFrame from './lib/utils/requestAnimationFrame';
 import * as style from './lib/utils/style';
-import * as animate from './lib/utils/animate';
+import animate from './lib/utils/animate';
 import State from './lib/utils/State';
 import BezierEasing from './lib/utils/BezierEasing';
 import search from './lib/utils/search';
