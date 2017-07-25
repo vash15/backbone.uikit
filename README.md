@@ -39,7 +39,7 @@ Coming soon...
    - BarView
    - TitleBarView
    - OsBarView (Deprecated IosBarView)
-   - [SearchBarView](./documentation/SearchBarView.md)
+   - [ScrollBarView](./documentation/ScrollBarView.md)
 - Dialogs
    - ImagesModalView
    - ModalView
