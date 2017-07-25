@@ -27,6 +27,7 @@ import BarView from './lib/navigations/BarView';
 import TitleBarView from './lib/navigations/TitleBarView';
 import OsBarView from './lib/navigations/OsBarView';
 const IosBarView = OsBarView;
+import ScrollBarView from './lib/navigations/ScrollBarView';
 
 // Dialogs view
 import ModalView from './lib/dialogs/ModalView';
@@ -62,6 +63,7 @@ let index = {
 	TitleBarView              : TitleBarView,
 	OsBarView                 : OsBarView,
 	IosBarView                : IosBarView,
+	ScrollBarView             : ScrollBarView,
 	ModalView                 : ModalView,
 	ImagesModalView           : ImagesModalView,
 	NavigationModalView       : NavigationModalView,
@@ -97,6 +99,7 @@ export {
 	TitleBarView              as TitleBarView,
 	OsBarView                 as OsBarView,
 	IosBarView                as IosBarView,
+	ScrollBarView             as ScrollBarView,
 	ModalView                 as ModalView,
 	NavigationModalView       as NavigationModalView,
 	ImagesModalView           as ImagesModalView,
