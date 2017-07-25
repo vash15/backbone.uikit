@@ -6,60 +6,58 @@ elemento passato come opzione.
 
 ![Image View](video/ScrollBarView.gif)
 
-## API
+## Options
 
-### Options
-
-#### bottom: `View`, `$`, `DOMNode`, `string` (es. `<div>`).
+### bottom: `View`, `$`, `DOMNode`, `string` (es. `<div>`).
 Contenuto da inserire nel `BOTTOM SIDE`.
 
-#### fadeBottomBackground: `Boolean`
+### fadeBottomBackground: `Boolean`
 Default `false`. Anima l'opacità del background assieme allo scroll.
 
-#### inverseBottomFading: `Boolean`
+### inverseBottomFading: `Boolean`
 Default `false`. Inverte l'animazione di `fadeBottomBackground`.
 
-#### resize: `Boolean`
+### resize: `Boolean`
 Default `true`. Ridimensiona il `BOTTOM SIDE` rispetto a `LEFT SIDE` e `RIGHT SIDE`.
 
-#### scroll: `Boolean`
+### scroll: `Boolean`
 Default `true`. Abilita lo scroll.
 
-#### scrollElement: `View`, `$`, `DOMNode`
+### scrollElement: `View`, `$`, `DOMNode`
 L'elemento esterno alla scroll bar a cui agganciare l'evento scroll.
 
-#### scrollUpHeight: `Integer`
+### scrollUpHeight: `Integer`
 Default `44`. Altezza in pixel della `BOTTOM SIDE` nello stato `STATUS_SCROLL_UP`.
 
 **NOTA: modificare anche il CSS in accordo con quanto impostato in questa opzione**
 
-#### scrollDownHeight: `Integer`
+### scrollDownHeight: `Integer`
 Default `44`. Altezza in pixel della `BOTTOM SIDE` nello stato `STATUS_SCROLL_DOWN`.
 
 **NOTA: modificare anche il CSS in accordo con quanto impostato in questa opzione**
 
-#### bounce: `auto`, `on`, `off`
+### bounce: `auto`, `on`, `off`
 Default `auto`. Abilita l'effetto bounce al termine dello scroll.
 
 - **auto**: abilita il bounce solo quando lo stato passa da `STATUS_SCROLL_DOWN` a `STATUS_SCROLL_UP`
 - **on**: abilita il bounce a prescindere dallo stato
 - **off**: bounce disabiltiato
 
-#### scrollBounceRange: `Integer`
+### scrollBounceRange: `Integer`
 Default `120`. Dimensione in pixel entro il quale lo scroll dovrà risposizionarsi.
 
-#### initialStatus: `STATUS_SCROLL_DOWN`, `STATUS_SCROLL_UP`
+### initialStatus: `STATUS_SCROLL_DOWN`, `STATUS_SCROLL_UP`
 Default `STATUS_SCROLL_DOWN`. Posizione iniziale di `BOTTOM SIDE`.
 
 **Nota: se `STATUS_SCROLL_UP` lo `scrollElement` deve essere scrollabile all'evento `onRender` della `ScrollBarView`**
 
 
-### Methods
+## Methods
 
-#### setScroller(scrollElement: `View`, `$`, `DOMNode`)
+### setScroller(scrollElement: `View`, `$`, `DOMNode`)
 Imposta l'elemento su cui rimanere in ascolto dell'evento scroll.
 
-#### changeStatus(newStatus: `STATUS_SCROLL_DOWN`, `STATUS_SCROLL_UP`, [options])
+### changeStatus(newStatus: `STATUS_SCROLL_DOWN`, `STATUS_SCROLL_UP`, [options])
 Cambia lo stato della `ScrollBarView`.
 
 **options**
@@ -67,9 +65,9 @@ Cambia lo stato della `ScrollBarView`.
 - **silent**: Default `false`. Disabilita il trigger dell'evento `change:status`.
 
 
-### Events
+## Events
 
-#### `change:status` => (newStatus: `STATUS_SCROLL_DOWN`, `STATUS_SCROLL_UP`)
+### `change:status` => (newStatus: `STATUS_SCROLL_DOWN`, `STATUS_SCROLL_UP`)
 Eseguito al cambio di stato.
 
 
