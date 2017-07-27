@@ -1,3 +1,12 @@
 .DS_Store
 node_modules
 bower_components
+.components.js
+.components.bundle.js
+.components.bundle.js.map
+style.css
+style.css.map
+bundle.js
+bundle.js.map
+commons.bundle.js
+commons.bundle.js.map
