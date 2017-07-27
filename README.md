@@ -6,7 +6,7 @@ Backbone UI Kit is a collection of views and components to enrich an application
 
 ## Demo
 
-Coming soon...
+Look into `examples` directory, execute `npm install` and `bower install` then `npm start` to try **backbone.uikit**.
 
 ## Dependencies
 
