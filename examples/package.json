@@ -1,0 +1,28 @@
+{
+  "name": "backbone.uikit-example",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "",
+  "main": "lib/app.js",
+  "scripts": {
+    "start": "eve start"
+  },
+  "browserify-shim": [],
+  "dependencies": {},
+  "devDependencies": {
+    "node-eve": "^2.3.5"
+  },
+  "eve-version": "2.3.5",
+  "eve-language": "es6",
+  "eve-build-date": "",
+  "eve-babel-plugins": {
+    "builtin-extend": {
+      "globals": [
+        "Error",
+        "Worker"
+      ],
+      "approximate": false
+    }
+  }
+}
