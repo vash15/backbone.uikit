@@ -1,0 +1,24 @@
+.ui-scroll-navigation-bar {
+	@extend .ui-ios-navigation-bar;
+
+	overflow-y: visible;
+
+	.bottom-side {
+		position: absolute;
+		top: $nav-height; // 44px
+		left: 0;
+		right: 0;
+		height: $nav-height;
+
+		.bottom-side-background {
+			@extend %fitContainer;
+			z-index: 0;
+			background-color: white;
+		}
+
+		.bottom-side-inner {
+			@extend %fitContainer;
+			z-index: 1;
+		}
+	}
+}

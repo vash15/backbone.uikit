@@ -1,39 +1,8 @@
 {
-  "name": "backbone.uikit",
-  "version": "2.0.0",
-  "homepage": "https://github.com/vash15/backbone.uikit",
-  "authors": [
-    {
-      "name": "Matteo Baggio",
-      "email": "matteo.baggio@gmail.com"
-    },
-    {
-      "name": "Michele Belluco",
-      "email": "michele@belluco.info"
-    }
-  ],
-  "description": "Backbone UIKit",
+  "name": "backbone.uikit-example",
+  "version": "0.0.1",
+  "description": "Backbone UIKit Exampls",
   "main": "index.js",
-  "moduleType": [
-    "amd",
-    "globals",
-    "node"
-  ],
-  "keywords": [
-    "backbone",
-    "uikit",
-    "ui"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
-    "documentation",
-	"examples"
-  ],
   "dependencies": {
     "jquery": "^3.0.0",
     "underscore": "^1.8.3",
@@ -49,7 +18,8 @@
     "search-utils": "^1.0.0",
     "impetus": "https://github.com/SonoIo/impetus.git#^0.9.0",
     "pinch-zoom-canvas": "^1.0.2",
-    "swiper": "^3.4.2"
+    "swiper": "^3.4.2",
+    "backbone.viewstack": "^2.3.1"
   },
   "resolutions": {
     "jquery": "^3.0.0",

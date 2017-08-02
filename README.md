@@ -6,7 +6,7 @@ Backbone UI Kit is a collection of views and components to enrich an application
 
 ## Demo
 
-Coming soon...
+Look into `examples` directory, execute `npm install` and `bower install` then `npm start` to try **backbone.uikit**.
 
 ## Dependencies
 
@@ -38,7 +38,8 @@ Coming soon...
    - NavigationView
    - BarView
    - TitleBarView
-   - IosBarView
+   - OsBarView (Deprecated IosBarView)
+   - [ScrollBarView](./documentation/ScrollBarView.md)
 - Dialogs
    - ImagesModalView
    - ModalView
