@@ -22,6 +22,7 @@ export default class MenuPage extends PageView {
 			'click .js-different-size-with-header': 'onDifferentSizeWithHeaderClick',
 			'click .js-different-size-with-2-columns': 'onDifferentSizeWith2ColumnsClick',
 			'click .js-different-size-with-3-columns': 'onDifferentSizeWith3ColumnsClick',
+			'click .js-different-size-with-4-columns': 'onDifferentSizeWith4ColumnsClick',
 			'click .js-horizontal-different-size': 'onHorizontalDifferentSizeClick',
 			'click .js-horizontal-different-size-with-header': 'onHorizontalDifferentSizeWithHeaderClick',
 			'click .js-horizontal-different-size-with-2-columns': 'onHorizontalDifferentSizeWith2ColumnsClick',
@@ -79,6 +80,16 @@ export default class MenuPage extends PageView {
 		const differentSizeListViewPage = new DifferentSizeListViewPage({
 			listview: {
 				itemsPerRow: 3
+			}
+		});
+		context.viewstack.pushView(differentSizeListViewPage);
+	}
+
+	onDifferentSizeWith4ColumnsClick() {
+		const differentSizeListViewPage = new DifferentSizeListViewPage({
+			listview: {
+				itemsPerRow: 4,
+				placeholders: 30
 			}
 		});
 		context.viewstack.pushView(differentSizeListViewPage);
