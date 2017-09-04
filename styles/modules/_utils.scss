@@ -92,6 +92,24 @@
 	}
 }
 
+@mixin respond-to-desktop($media) {
+	@if $media == mobile {
+		@media only screen and ( max-width: 767px ) { @content; }
+	}
+	@else if $media == tablet {
+		@media only screen and ( min-width: 768px ) { @content; }
+	}
+	@else if $media == smallDesktop {
+		@media only screen and ( min-width: 980px ) { @content; }
+	}
+	@else if $media == desktop {
+		@media only screen and ( min-width: 1200px ) { @content; }
+	}
+	@else if $media == largeDesktop {
+		@media only screen and ( min-width: 1650px ) { @content; }
+	}
+}
+
 // Incrementa l'area cliccabile
 @mixin touchable($size: 10px) {
 	&:after {
