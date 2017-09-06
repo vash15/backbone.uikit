@@ -92,6 +92,24 @@
 	}
 }
 
+@mixin respond-to-desktop($media) {
+	@if $media == mobile {
+		@media only screen and ( max-width: 767px ) { @content; }
+	}
+	@else if $media == tablet {
+		@media only screen and ( min-width: 768px ) { @content; }
+	}
+	@else if $media == smallDesktop {
+		@media only screen and ( min-width: 980px ) { @content; }
+	}
+	@else if $media == desktop {
+		@media only screen and ( min-width: 1200px ) { @content; }
+	}
+	@else if $media == largeDesktop {
+		@media only screen and ( min-width: 1650px ) { @content; }
+	}
+}
+
 // Incrementa l'area cliccabile
 @mixin touchable($size: 10px) {
 	&:after {
@@ -122,5 +140,95 @@
 		display: -webkit-box;
 		-webkit-line-clamp: $line;
 		-webkit-box-orient: vertical;
+	}
+}
+
+// Add style from root
+@mixin at-root($class) {
+	@at-root #{$class} #{&} {
+		@content;
+	}
+}
+
+// Short-cut form no-touch class
+@mixin no-touch() {
+	@include at-root('no-touch');
+}
+
+
+@mixin input-placeholder($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder { //for newer versions of Firefox
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin appearance($appearance) {
+	-webkit-appearance: $appearance;
+	-moz-appearance: $appearance;
+	-ms-appearance: $appearance;
+	appearance: $appearance;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin rotate($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+@mixin translate3d($x, $y, $z) {
+	@include transform(translate3d($x, $y, $z));
+}
+
+@mixin skew($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin($origin) {
+	-moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin transition($transitions...) {
+	-moz-transition: $transitions;
+	-o-transition: $transitions;
+	-ms-transition: $transitions;
+	-webkit-transition: $transitions;
+	transition: $transitions;
+}
+
+@mixin icon($char: null, $size: null, $color: null) {
+	@if ($size) {
+		font-size: $size;
+	}
+	&:before {
+		vertical-align: $icon-vertical-align;
+		@if $char {
+			content: $char;
+		}
+		@if $color {
+			color: $color;
+		}
 	}
 }
