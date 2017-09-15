@@ -1,0 +1,112 @@
+.ui-tab-bar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	box-sizing: border-box;
+
+	.ui-tab-bar-toolbar {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: $tab-height;
+		box-sizing: border-box;
+
+		display: -webkit-flex;
+		display: flex;
+
+		-webkit-flex-direction: row;
+		flex-direction: row;
+
+		-webkit-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+
+		justify-content: center;
+
+		align-items: -webkit-flex-start;
+		align-items: flex-start;
+
+		@include at-root('.ios.iphone-x'){
+			height: $tab-height + $ios-iphone-x-margin-bottom;
+		}
+	}
+
+	.ui-tab-bar-toolbar-button {
+		position: relative;
+		height: $tab-height;
+		box-sizing: border-box;
+
+		display: -webkit-flex;
+		display: flex;
+
+		align-items: center;
+		justify-content: center;
+
+		-webkit-flex-basis: 20%;
+		flex-basis: 20%;
+
+		text-align: center;
+		font-size: 10px;
+		color: #cece;
+
+		-webkit-transition: color 300ms;
+		transition: color 300ms;
+
+		&.active {
+			i {}
+		}
+
+		.ui-tab-bar-toolbar-button-label{
+			display: block;
+		}
+
+		i {
+			display: block;
+		}
+
+	}
+
+	.ui-tab-bar-content {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: $tab-height;
+		left: 0;
+		overflow: hidden;
+		box-sizing: border-box;
+		@include at-root('.ios.iphone-x'){
+			bottom: $tab-height + $ios-iphone-x-margin-bottom;
+		}
+	}
+	.ui-tab-bar-content-page {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+
+	.viewstack {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+	}
+}
+
+@include respond-to('tablet'){
+	.ui-tab-bar {
+		.ui-tab-bar-toolbar-button {
+			-webkit-flex-basis: 10%;
+			flex-basis: 10%;
+		}
+	}
+}

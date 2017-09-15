@@ -19,19 +19,19 @@
 %noScroll {
 	overflow: initial;
 	-webkit-overflow-scrolling: auto;
-	        overflow-scrolling: auto;
+			overflow-scrolling: auto;
 }
 %scroll {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	        overflow-scrolling: touch;
+			overflow-scrolling: touch;
 }
 %hscroll {
 	overflow-x: auto;
 	overflow-y: hidden;
 	-webkit-overflow-scrolling: touch;
-	        overflow-scrolling: touch;
+		overflow-scrolling: touch;
 }
 %center-flex-box{
 	display: flex;
@@ -56,7 +56,7 @@
 .overflow-scroll.deactivate {
 	overflow: hidden;
 	-webkit-overflow-scrolling: auto !important;
-	        overflow-scrolling: auto !important;
+		overflow-scrolling: auto !important;
 }
 
 
