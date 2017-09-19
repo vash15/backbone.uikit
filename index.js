@@ -39,6 +39,7 @@ import NavigationModalView from './lib/dialogs/NavigationModalView';
 // Forms View
 import FormView from './lib/forms/FormView';
 import TextField from './lib/forms/TextField';
+import PasswordField from './lib/forms/PasswordField';
 import SearchFilterView from './lib/forms/SearchFilterView';
 import SwitchView from './lib/forms/SwitchView';
 import SelectField from './lib/forms/SelectField';
@@ -72,6 +73,7 @@ let index = {
 	NavigationModalView       : NavigationModalView,
 	FormView                  : FormView,
 	TextField                 : TextField,
+	PasswordField             : PasswordField,
 	SearchFilterView          : SearchFilterView,
 	SwitchView                : SwitchView,
 	SelectField               : SelectField,
@@ -109,6 +111,7 @@ export {
 	ImagesModalView           as ImagesModalView,
 	FormView                  as FormView,
 	TextField                 as TextField,
+	PasswordField             as PasswordField,
 	SearchFilterView          as SearchFilterView,
 	SwitchView                as SwitchView,
 	SelectField               as SelectField,
