@@ -63,16 +63,13 @@ Viene richiamato al destroy della view. Se la view possiede delle view figlie, q
 ## Usage
 
 ```javascript
-
 import { BaseView } from 'backbone.uikit';
-
 export default class MyView extends BaseView {
-
-	addClass(){
+	addClass() {
 		return 'my-view';
 	}
 
-	constructor(options){
+	constructor(options) {
 		super(options);
 
 		this.setDefaultsOptions({
@@ -80,26 +77,23 @@ export default class MyView extends BaseView {
 		});
 
 		// Adding a sub view width state
-		this.addSubView('labelView', new LabelView({ message: this.options.message }), this.getState() );
-
+		this.addSubView('labelView', new LabelView({ message: this.options.message }), this.getState());
 	}
 
-	onRender(rendered){
-		if ( rendered )
+	onRender(rendered) {
+		if (rendered)
 			return this;
 
 		let labelView = this.getSubView('labelView');
-		this.$el.empty().append( labelView.el );
+		this.$el.empty().append(labelView.el);
 		labelView.render();
 
 		return this;
 	}
 
-	onDestroy(options){
+	onDestroy(options) {
 		console.log('on destroy My View!');
 		super.onDestroy(options);
 	}
-
 }
-
 ```
