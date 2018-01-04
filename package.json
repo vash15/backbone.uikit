@@ -1,37 +1,43 @@
 {
-    "name": "backbone.uikit",
-    "version": "2.0.0",
-    "description": "Backbone UIKit",
-    "main": "index.js",
-    "scripts": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/vash15/backbone.uikit.git"
+  "name": "backbone.uikit",
+  "version": "2.1.0",
+  "description": "Backbone UIKit",
+  "main": "index.js",
+  "scripts": {
+    "doc": "documentation build index.js -f md -o documentation/references.md",
+    "doc-html": "documentation build index.js -f html -o documentation/references"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vash15/backbone.uikit.git"
+  },
+  "keywords": [
+    "backbone",
+    "uikit",
+    "ui"
+  ],
+  "contributors": [
+    {
+      "name": "Matteo Baggio",
+      "email": "matteo.baggio@gmail.com"
     },
-    "keywords": [
-        "backbone",
-        "uikit",
-        "ui"
-    ],
-    "contributors": [
-        {
-            "name": "Matteo Baggio",
-            "email": "matteo.baggio@gmail.com"
-        },
-        {
-            "name": "Michele Belluco",
-            "email": "michele@belluco.info"
-        }
-    ],
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/vash15/backbone.uikit/issues"
-    },
-    "homepage": "https://github.com/vash15/backbone.uikit#readme",
-    "browserify-shim": {},
-    "eve-language": "es6",
-    "eve-version": "2.0.0",
-    "eve-configs": {
-        "env": "development"
+    {
+      "name": "Michele Belluco",
+      "email": "michele@belluco.info"
     }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vash15/backbone.uikit/issues"
+  },
+  "homepage": "https://github.com/vash15/backbone.uikit#readme",
+  "browserify-shim": {},
+  "eve-language": "es6",
+  "eve-version": "2.0.0",
+  "eve-configs": {
+    "env": "development"
+  },
+  "devDependencies": {
+    "documentation": "^5.3.3"
+  }
 }

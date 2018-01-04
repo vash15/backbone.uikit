@@ -4,6 +4,16 @@ import NavigationView from '../../lib/navigations/NavigationView';
 import MenuPage from './MenuPage';
 import requestNextAnimationFrame from '../../lib/utils/requestAnimationFrame';
 
+context.uikit = {
+	SwipeListItemView: {
+		vibrate: () => {
+			if (window.TapticEngine) {
+				window.TapticEngine.selection();
+			}
+		}
+	}
+};
+
 const viewstack = context.viewstack  = new Viewstack({ el: '#application' });
 viewstack.render();
 
