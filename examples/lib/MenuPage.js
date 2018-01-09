@@ -5,6 +5,7 @@ import PageView from '../../lib/PageView';
 import OsBarView from '../../lib/navigations/OsBarView';
 import ListView from '../../lib/listviews/ListView';
 import DifferentSizeListViewPage from './DifferentSizeListViewPage';
+import SwipeListViewPage from './SwipeListViewPage';
 
 export default class MenuPage extends PageView {
 
@@ -18,6 +19,7 @@ export default class MenuPage extends PageView {
 		this.template = require('../templates/menu.html');
 
 		this.addEvents({
+			'click .js-swipe-list-item': 'onSwipeListItemClick',
 			'click .js-different-size': 'onDifferentSizeClick',
 			'click .js-different-size-with-header': 'onDifferentSizeWithHeaderClick',
 			'click .js-different-size-with-2-columns': 'onDifferentSizeWith2ColumnsClick',
@@ -26,7 +28,7 @@ export default class MenuPage extends PageView {
 			'click .js-horizontal-different-size': 'onHorizontalDifferentSizeClick',
 			'click .js-horizontal-different-size-with-header': 'onHorizontalDifferentSizeWithHeaderClick',
 			'click .js-horizontal-different-size-with-2-columns': 'onHorizontalDifferentSizeWith2ColumnsClick',
-			'click .js-horizontal-different-size-with-3-columns': 'onHorizontalDifferentSizeWith3ColumnsClick'
+			'click .js-horizontal-different-size-with-3-columns': 'onHorizontalDifferentSizeWith3ColumnsClick',
 		});
 
 		let state = this.getState();
@@ -51,7 +53,11 @@ export default class MenuPage extends PageView {
 
 	//
 	// Vertial list view
-	//
+
+	onSwipeListItemClick() {
+		const swipeListViewPage = new SwipeListViewPage();
+		context.viewstack.pushView(swipeListViewPage);
+	}
 
 	onDifferentSizeClick() {
 		const differentSizeListViewPage = new DifferentSizeListViewPage();

@@ -1,5 +1,4 @@
 
-$toolbar-height: 44px;
 $overlay-color: rgba(40,47,57,0.27);
 
 $regular-font: 'helvetica';
@@ -7,6 +6,9 @@ $bold-font: 'helvetica';
 $italic-font: 'helvetica';
 
 $nav-height: 44px;
+$tab-height: 50px;
+$toolbar-height: 44px;
+$ios-iphone-x-margin-bottom: 20px;
 
 $icon-font: 'unieuro';
 
@@ -15,6 +17,11 @@ $icon-font: 'unieuro';
 //
 // Example style
 //
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
 
 #application {
 	position: absolute;
@@ -76,4 +83,42 @@ $icon-font: 'unieuro';
 
 .menu-page {
 	padding: 0 20px;
+}
+
+
+// Swipe list item view
+.ui-swipe-list-item {
+	height: 120px;
+}
+.ui-swipe-list-item-drawer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background-color: white;
+	box-sizing: border-box;
+	border-bottom: 1px solid #eee;
+}
+.ui-swipe-list-item-actions {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	background-color: #ccc;
+}
+.ui-swipe-list-item-actions-left {
+	right: 50%;
+}
+.action-active .ui-swipe-list-item-actions-left {
+	background-color: #f2ab33;
+}
+.ui-swipe-list-item-actions-right {
+	left: 50%;
+}
+.action-active .ui-swipe-list-item-actions-right {
+	background-color: #df1c1c;
 }
