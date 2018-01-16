@@ -1,11 +1,34 @@
 import _ from 'underscore';
 import $ from 'jquery';
 import context from 'context-utils';
+import BaseView from '../../lib/BaseView';
 import PageView from '../../lib/PageView';
 import OsBarView from '../../lib/navigations/OsBarView';
 import ListView from '../../lib/listviews/ListView';
 import DifferentSizeListViewPage from './DifferentSizeListViewPage';
 import SwipeListViewPage from './SwipeListViewPage';
+
+
+class HeaderView extends BaseView {
+	onRender() {
+		this.$el.text('Header').css('position', 'absolute');
+	}
+}
+
+class FooterView extends BaseView {
+	onRender() {
+		this.height = 300;
+		this.$el.text('Footer').css({
+			background: 'red',
+			height: this.height
+		});
+		// setInterval(() => {
+		// 	this.height += 100;
+		// 	this.$el.height(this.height);
+		// }, 2000);
+	}
+}
+
 
 export default class MenuPage extends PageView {
 
@@ -55,7 +78,13 @@ export default class MenuPage extends PageView {
 	// Vertial list view
 
 	onSwipeListItemClick() {
-		const swipeListViewPage = new SwipeListViewPage();
+		const swipeListViewPage = new SwipeListViewPage({
+			listview: {
+				// headerView: new HeaderView(),
+				// headerSize: 40,
+				// footerView: new FooterView()
+			}
+		});
 		context.viewstack.pushView(swipeListViewPage);
 	}
 
@@ -67,7 +96,9 @@ export default class MenuPage extends PageView {
 	onDifferentSizeWithHeaderClick() {
 		const differentSizeListViewPage = new DifferentSizeListViewPage({
 			listview: {
-				headerSize: 40
+				headerView: new HeaderView(),
+				headerSize: 40,
+				footerView: new FooterView()
 			}
 		});
 		context.viewstack.pushView(differentSizeListViewPage);
