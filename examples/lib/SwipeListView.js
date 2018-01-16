@@ -24,7 +24,7 @@ export default class SwipeListView extends ListView {
 
 	onSelectItem(item, done) {
 		if (item) {
-			console.log(item.element);
+			console.log(item);
 		}
 		return done();
 	}
