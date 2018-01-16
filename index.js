@@ -20,6 +20,7 @@ import RateView from './lib/RateView';
 // List View
 import ListView from './lib/listviews/ListView';
 import ListItemView from './lib/listviews/ListItemView';
+import SwipeListItemView from './lib/listviews/SwipeListItemView';
 
 // Navigations view
 import NavigationView from './lib/navigations/NavigationView';
@@ -29,7 +30,6 @@ import TabBarView from './lib/navigations/TabBarView';
 import OsBarView from './lib/navigations/OsBarView';
 const IosBarView = OsBarView;
 import ScrollBarView from './lib/navigations/ScrollBarView';
-
 
 // Dialogs view
 import ModalView from './lib/dialogs/ModalView';
@@ -61,6 +61,7 @@ let index = {
 	RateView                  : RateView,
 	ListView                  : ListView,
 	ListItemView              : ListItemView,
+	SwipeListItemView         : SwipeListItemView,
 	NavigationView            : NavigationView,
 	BarView                   : BarView,
 	TitleBarView              : TitleBarView,
@@ -99,6 +100,7 @@ export {
 	RateView                  as RateView,
 	ListView                  as ListView,
 	ListItemView              as ListItemView,
+	SwipeListItemView         as SwipeListItemView,
 	NavigationView            as NavigationView,
 	BarView                   as BarView,
 	TitleBarView              as TitleBarView,

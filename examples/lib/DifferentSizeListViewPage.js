@@ -68,7 +68,7 @@ export default class DifferentSizeListViewPage extends PageView {
 
 		const models = [];
 		let aModelClass;
-		for (var i = 0; i < 30; i++) {
+		for (var i = 0; i < 30; i++) { // 30
 			let size = (i % 3 + 1) * 100;
 			switch (i%3) {
 				case 0: aModelClass = ModelA; break;
