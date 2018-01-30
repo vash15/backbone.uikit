@@ -34,6 +34,7 @@ Look into `examples` directory, execute `npm install` and `bower install` then `
 - [ImageView](./documentation/ImageView.md)
 - [PageView](./documentation/PageView.md)
 - RateView
+- Card3DView
 - Navigation
    - NavigationView
    - BarView
@@ -46,6 +47,7 @@ Look into `examples` directory, execute `npm install` and `bower install` then `
 - List
    - ListView
    - ListItemView
+   - SwipeListItemView
 - Form
    - FormView
    - TextField
@@ -54,11 +56,15 @@ Look into `examples` directory, execute `npm install` and `bower install` then `
    - SearchFilterView
    - SelectField
    - SwitchView
+   - LookupField
+   - PasswordField
 - Utils
    - style
    - animate
    - requestAnimationFrame
    - State
+   - search
+   - BezierEasing
 
 
 ## How to recall
