@@ -7,6 +7,7 @@ import OsBarView from '../../lib/navigations/OsBarView';
 import ListView from '../../lib/listviews/ListView';
 import DifferentSizeListViewPage from './DifferentSizeListViewPage';
 import SwipeListViewPage from './SwipeListViewPage';
+import Card3DPage from './Card3DPage';
 
 
 class HeaderView extends BaseView {
@@ -42,6 +43,7 @@ export default class MenuPage extends PageView {
 		this.template = require('../templates/menu.html');
 
 		this.addEvents({
+			'click .js-card3d': 'onCard3DClick',
 			'click .js-swipe-list-item': 'onSwipeListItemClick',
 			'click .js-different-size': 'onDifferentSizeClick',
 			'click .js-different-size-with-header': 'onDifferentSizeWithHeaderClick',
@@ -76,6 +78,11 @@ export default class MenuPage extends PageView {
 
 	//
 	// Vertial list view
+
+	onCard3DClick() {
+		const card3DPage = new Card3DPage();
+		context.viewstack.pushView(card3DPage);
+	}
 
 	onSwipeListItemClick() {
 		const swipeListViewPage = new SwipeListViewPage({

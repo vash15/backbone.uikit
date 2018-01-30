@@ -122,3 +122,32 @@ html, body {
 .action-active .ui-swipe-list-item-actions-right {
 	background-color: #df1c1c;
 }
+
+
+// Card3D
+.ui-card3d {
+	perspective: 1000px;
+	margin: 30px;
+	// display: inline-block;
+	vertical-align: middle;
+	transform: translate3d(0,0,0);
+	.card {
+		transform: translate3d(0,0,0);
+		overflow: hidden;
+		background-color: red;
+		border-radius: 8px;
+		width: 320px;
+		height: 200px;
+		background: url(../img/pattern.jpg);
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		// transition: box-shadow 300ms;
+		&.active {
+			box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+		}
+	}
+	&.big .card {
+		height: 320px;
+	}
+}
