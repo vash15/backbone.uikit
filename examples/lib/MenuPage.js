@@ -11,8 +11,16 @@ import Card3DPage from './Card3DPage';
 
 
 class HeaderView extends BaseView {
+	constructor(options) {
+		super(options);
+		this.height = options && options.height ? options.height : '100%';
+		this.width  = options && options.width  ? options.width  : '100%';
+	}
 	onRender() {
-		this.$el.text('Header').css('position', 'absolute');
+		this.$el.text('Header')
+			.css('display', 'inline-block')
+			.css('height', this.height)
+			.css('width', this.width);
 	}
 }
 
@@ -103,8 +111,7 @@ export default class MenuPage extends PageView {
 	onDifferentSizeWithHeaderClick() {
 		const differentSizeListViewPage = new DifferentSizeListViewPage({
 			listview: {
-				headerView: new HeaderView(),
-				headerSize: 40,
+				headerView: new HeaderView({ height: 150 }),
 				footerView: new FooterView()
 			}
 		});
@@ -156,7 +163,7 @@ export default class MenuPage extends PageView {
 		const differentSizeListViewPage = new DifferentSizeListViewPage({
 			listview: {
 				orientation: ListView.ORIENTATION_HORIZONTAL,
-				headerSize: 40
+				headerView: new HeaderView({ width: 200 })
 			}
 		});
 		context.viewstack.pushView(differentSizeListViewPage);
