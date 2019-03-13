@@ -20,6 +20,7 @@ import RateView from './lib/RateView';
 // List View
 import ListView from './lib/listviews/ListView';
 import ListItemView from './lib/listviews/ListItemView';
+import ListGroupView from './lib/listviews/ListGroupView';
 import SwipeListItemView from './lib/listviews/SwipeListItemView';
 
 // Navigations view
@@ -61,6 +62,7 @@ let index = {
 	RateView                  : RateView,
 	ListView                  : ListView,
 	ListItemView              : ListItemView,
+	ListGroupView             : ListGroupView,
 	SwipeListItemView         : SwipeListItemView,
 	NavigationView            : NavigationView,
 	BarView                   : BarView,
@@ -99,6 +101,7 @@ export {
 	PageView                  as PageView,
 	RateView                  as RateView,
 	ListView                  as ListView,
+	ListGroupView             as ListGroupView,
 	ListItemView              as ListItemView,
 	SwipeListItemView         as SwipeListItemView,
 	NavigationView            as NavigationView,

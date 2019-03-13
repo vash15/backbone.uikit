@@ -434,7 +434,7 @@ th {
 .deactivate .overflow-scroll,
 .overflow-scroll.swipe-back,
 .overflow-scroll.deactivate {
-  overflow: hidden;
+  overflow: hidden !important;
   -webkit-overflow-scrolling: auto !important;
   overflow-scrolling: auto !important; }
 
@@ -1086,6 +1086,82 @@ th {
     .ui-scroll-navigation-bar .bottom-side .bottom-side-inner {
       z-index: 1; }
 
+.ui-tab-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box; }
+  .ui-tab-bar .ui-tab-bar-toolbar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: -webkit-flex-start;
+    align-items: flex-start; }
+    .ios.iphone-x .ui-tab-bar .ui-tab-bar-toolbar {
+      height: 70px; }
+  .ui-tab-bar .ui-tab-bar-toolbar-button {
+    position: relative;
+    height: 50px;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-flex-basis: 20%;
+    flex-basis: 20%;
+    text-align: center;
+    font-size: 10px;
+    color: #cece;
+    -webkit-transition: color 300ms;
+    transition: color 300ms; }
+    .ui-tab-bar .ui-tab-bar-toolbar-button .ui-tab-bar-toolbar-button-label {
+      display: block; }
+    .ui-tab-bar .ui-tab-bar-toolbar-button i {
+      display: block; }
+  .ui-tab-bar .ui-tab-bar-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    overflow: hidden;
+    box-sizing: border-box; }
+    .ios.iphone-x .ui-tab-bar .ui-tab-bar-content {
+      bottom: 70px; }
+  .ui-tab-bar .ui-tab-bar-content-page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none; }
+    .ui-tab-bar .ui-tab-bar-content-page.active {
+      display: block; }
+  .ui-tab-bar .viewstack {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0; }
+
+@media only screen and (min-width: 600px) {
+  .ui-tab-bar .ui-tab-bar-toolbar-button {
+    -webkit-flex-basis: 10%;
+    flex-basis: 10%; } }
+
 .ui-modal .overlay {
   background-color: rgba(40, 47, 57, 0.27);
   z-index: 0; }
@@ -1230,7 +1306,7 @@ th {
     margin: 0;
     background-color: #D3D5D7;
     border-radius: 4px;
-    line-height: 30px;
+    line-height: 40px;
     will-change: all;
     transition: transform 300ms; }
     .ui-search-filter .input input {
@@ -1251,7 +1327,7 @@ th {
     color: #8F8E94;
     z-index: 1; }
     .ui-search-filter i:before {
-      vertical-align: -3px; }
+      vertical-align: -1px; }
   .ui-search-filter .cancel {
     position: absolute;
     right: 8px;
@@ -1445,6 +1521,15 @@ th {
     -webkit-transform: translate3d(-3000px, 0, 0);
     transform: translate3d(-3000px, 0, 0); } }
 
+.ui-list-view .ui-swipe-list-item-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  transform: translate3d(0, 0, 0); }
+
 .leaflet-popup-close-button {
   display: none; }
 
@@ -1555,6 +1640,10 @@ th {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
+html, body {
+  height: 100%;
+  overflow: hidden; }
+
 #application {
   position: absolute;
   top: 0;
@@ -1586,6 +1675,10 @@ th {
   align-items: center;
   align-content: stretch; }
 
+.ui-list-group {
+  z-index: 1;
+  background-color: red; }
+
 .cellA {
   background-color: #d9eec1; }
 
@@ -1605,5 +1698,61 @@ th {
 
 .menu-page {
   padding: 0 20px; }
+
+.ui-swipe-list-item {
+  height: 120px; }
+
+.ui-swipe-list-item-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee; }
+
+.ui-swipe-list-item-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #ccc; }
+
+.ui-swipe-list-item-actions-left {
+  right: 50%; }
+
+.action-active .ui-swipe-list-item-actions-left {
+  background-color: #f2ab33; }
+
+.ui-swipe-list-item-actions-right {
+  left: 50%; }
+
+.action-active .ui-swipe-list-item-actions-right {
+  background-color: #df1c1c; }
+
+.ui-card3d {
+  perspective: 1000px;
+  margin: 30px;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0); }
+  .ui-card3d .card {
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+    background-color: red;
+    border-radius: 8px;
+    width: 320px;
+    height: 200px;
+    background: url(../img/pattern.jpg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .ui-card3d .card.active {
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+  .ui-card3d.big .card {
+    height: 320px; }
 
 /*# sourceMappingURL=style.css.map */

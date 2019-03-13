@@ -10,7 +10,7 @@
 		margin: 0;
 		background-color: #D3D5D7;
 		border-radius: 4px;
-		line-height: 30px;
+		line-height: 40px;
 		will-change: all;
 		transition: transform 300ms;
 		input {
@@ -34,7 +34,7 @@
 		color: #8F8E94;
 		z-index: 1;
 		&:before {
-			vertical-align: -3px;
+			vertical-align: -1px;
 		}
 	}
 	.cancel {

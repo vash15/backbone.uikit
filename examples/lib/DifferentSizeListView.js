@@ -152,7 +152,7 @@ export default class DifferentSizeListView extends ListView {
 		return new ResizableListItemView(options);
 	}
 
-	getListItemSizeAtIntexWithOptions(index, options) {
+	getListItemSizeAtIndexWithOptions(index, options) {
 		const model = options.model;
 		if (model instanceof ModelA)
 			return CellA.getSize(model);

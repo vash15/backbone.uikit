@@ -9,6 +9,21 @@ import ModelA from './models/ModelA';
 import ModelB from './models/ModelB';
 import ModelC from './models/ModelC';
 
+
+class SortedCollection extends Collection {
+
+	comparator(itemA, itemB) {
+		if (itemA.get('group') < itemB.get('group')) {
+			return -1;
+		} else if (itemA.get('group') > itemB.get('group')) {
+			return 1;
+		} else {
+			return 1;
+		}
+	}
+
+}
+
 export default class DifferentSizeListViewPage extends PageView {
 
 	addClass() {
@@ -31,7 +46,10 @@ export default class DifferentSizeListViewPage extends PageView {
 		this.initCollection();
 
 		const differentSizeListView = new DifferentSizeListView(_.extend(this.options.listview || {}, {
-			collection: this.collection
+			collection: this.collection,
+			groupBy: 'group', // Comment this line to disable the group functionality
+			groupHeight: 50,
+			groupWidth: 50
 		}));
 		this.addSubView('differentSizeListView', differentSizeListView);
 
@@ -68,7 +86,8 @@ export default class DifferentSizeListViewPage extends PageView {
 
 		const models = [];
 		let aModelClass;
-		for (var i = 0; i < 30; i++) { // 30
+		let aGroupBy;
+		for (var i = 0; i < 200; i++) { // 30
 			let size = (i % 3 + 1) * 100;
 			switch (i%3) {
 				case 0: aModelClass = ModelA; break;
@@ -79,12 +98,16 @@ export default class DifferentSizeListViewPage extends PageView {
 				id: i,
 				size: size,
 				color: colors[i % 3],
-				image: getImage(size)
+				image: getImage(size),
+				group: Math.floor(i / 5) + 1
 			}));
 		}
 
-		const differentSizeCollection = new Collection(models);
+		const differentSizeCollection = new SortedCollection(models);
 		this.collection = differentSizeCollection;
+
+		window.ModelA = ModelA;
+		window._collection = this.collection;
 	}
 
 }
