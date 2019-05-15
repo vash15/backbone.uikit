@@ -16,6 +16,7 @@ import BaseView from './lib/BaseView';
 import ImageView from './lib/ImageView';
 import PageView from './lib/PageView';
 import RateView from './lib/RateView';
+import YoutubePlayerView from './lib/YoutubePlayerView';
 
 // List View
 import ListView from './lib/listviews/ListView';
@@ -60,6 +61,7 @@ let index = {
 	ImageView                 : ImageView,
 	PageView                  : PageView,
 	RateView                  : RateView,
+	YoutubePlayerView         : YoutubePlayerView,
 	ListView                  : ListView,
 	ListItemView              : ListItemView,
 	ListGroupView             : ListGroupView,
@@ -100,6 +102,7 @@ export {
 	ImageView                 as ImageView,
 	PageView                  as PageView,
 	RateView                  as RateView,
+	YoutubePlayerView         as YoutubePlayerView,
 	ListView                  as ListView,
 	ListGroupView             as ListGroupView,
 	ListItemView              as ListItemView,
