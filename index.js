@@ -46,6 +46,7 @@ import SearchFilterView from './lib/forms/SearchFilterView';
 import SwitchView from './lib/forms/SwitchView';
 import SelectField from './lib/forms/SelectField';
 import CheckboxField from './lib/forms/CheckboxField';
+import RadioButtonsField from './lib/forms/RadioButtonsField';
 import CreditCardField from './lib/forms/CreditCardField';
 import LookupField from './lib/forms/LookupField';
 import LookupPage from './lib/forms/LookupPage';
@@ -84,6 +85,7 @@ let index = {
 	SelectField               : SelectField,
 	CreditCardField           : CreditCardField,
 	CheckboxField             : CheckboxField,
+	RadioButtonsField         : RadioButtonsField,
 	LookupField               : LookupField,
 	LookupPage                : LookupPage
 };
@@ -125,6 +127,7 @@ export {
 	SelectField               as SelectField,
 	CreditCardField           as CreditCardField,
 	CheckboxField             as CheckboxField,
+	RadioButtonsField         as RadioButtonsField,
 	LookupField               as LookupField,
 	LookupPage                as LookupPage
 };
