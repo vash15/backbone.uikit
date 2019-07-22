@@ -17,7 +17,7 @@
 
 // Usage: @include animation(block-1-animate, $speed, ease-out, infinite, null)
 @mixin animation ($animation, $duration, $transition, $iteration, $fillMode){
-	
+
 	-webkit-animation-name: $animation;
 	-moz-animation-name: $animation;
 	-ms-animation-name: $animation;
@@ -29,8 +29,8 @@
 	-ms-animation-duration: $duration;
 	-o-animation-duration: $duration;
 	animation-duration: $duration;
-	
-	
+
+
 	@if $transition{
 		-webkit-animation-timing-function: $transition;
 		-moz-animation-timing-function: $transition;
@@ -41,22 +41,22 @@
 
 	@if $iteration{
 		-webkit-animation-iteration-count: $iteration;
-		-moz-animation-iteration-count: $iteration;	
-		-ms-animation-iteration-count: $iteration;	
+		-moz-animation-iteration-count: $iteration;
+		-ms-animation-iteration-count: $iteration;
 		-o-animation-iteration-count: $iteration;
 		animation-iteration-count: $iteration;
 	}
 
+	@if $fillMode == true {
+		$fillMode: both;
+	}
+
 	@if $fillMode {
-		-webkit-animation-fill-mode: both;
-		-moz-animation-fill-mode: both;
-		-ms-animation-fill-mode: both;
-		-o-animation-fill-mode: both;
-		animation-fill-mode: both;
+		-webkit-animation-fill-mode: $fillMode;
+		-moz-animation-fill-mode: $fillMode;
+		-ms-animation-fill-mode: $fillMode;
+		-o-animation-fill-mode: $fillMode;
+		animation-fill-mode: $fillMode;
 	}
 
 }
-
-
-
-
