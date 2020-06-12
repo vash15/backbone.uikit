@@ -93,7 +93,6 @@ let index = {
 
 export default index;
 export {
-	requestAnimationFrame     as requestAnimationFrame,
 	requestNextAnimationFrame as requestNextAnimationFrame,
 	style                     as style,
 	BezierEasing              as BezierEasing,
