@@ -4,7 +4,12 @@
 // import DetectSwipe from "jquery-detect-swipe";
 
 // Utils
-import requestNextAnimationFrame from './lib/utils/requestAnimationFrame';
+
+import {
+	requestNextAnimationFrame,
+	requestAnimationFrame,
+	cancelAnimationFrame
+} from './lib/utils/requestAnimationFrame';
 import * as style from './lib/utils/style';
 import animate from './lib/utils/animate';
 import State from './lib/utils/State';
@@ -53,6 +58,8 @@ import LookupPage from './lib/forms/LookupPage';
 
 let index = {
 	requestNextAnimationFrame : requestNextAnimationFrame,
+	requestAnimationFrame     : requestAnimationFrame,
+	cancelAnimationFrame      : cancelAnimationFrame,
 	style                     : style,
 	BezierEasing              : BezierEasing,
 	search                    : search,
@@ -94,6 +101,8 @@ let index = {
 export default index;
 export {
 	requestNextAnimationFrame as requestNextAnimationFrame,
+	requestAnimationFrame     as requestAnimationFrame,
+	cancelAnimationFrame      as cancelAnimationFrame,
 	style                     as style,
 	BezierEasing              as BezierEasing,
 	search                    as search,
